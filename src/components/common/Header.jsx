@@ -1,0 +1,107 @@
+import { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
+import TopHeader from "./TopHeader";
+import { headerMenuData } from "../../data/headerMenuData";
+
+export default function Header() {
+  const headerRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!headerRef.current) return;
+
+      if (window.scrollY > 250) {
+        headerRef.current.classList.add("sticky");
+      } else {
+        headerRef.current.classList.remove("sticky");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  return (
+    <header className="ht-header-area header-1">
+      {/* Top Header */}
+      <TopHeader />
+
+      {/* Main Header */}
+      <div
+        ref={headerRef}
+        className="ht-main-header header-1"
+      >
+        <div className="container">
+          <div className="ht-menu-wrapper">
+            <div className="ht-menu-left">
+              {/* Logo */}
+              <div className="ht-menu-logo">
+                <Link to="/">
+                  <img
+                    src="/images/logo/logo.svg"
+                    alt="logo"
+                  />
+                </Link>
+              </div>
+
+              {/* Menu */}
+              <div className="ht-menu-main d-none d-lg-block">
+                <nav className="ht-mobile-menu-active">
+                  <ul>
+                    {headerMenuData.map((menu, index) => (
+                      <li
+                        key={index}
+                        className={
+                          menu.children ? "has-dropdown" : ""
+                        }
+                      >
+                        {menu.to ? (
+                          <Link to={menu.to}>
+                            {menu.label}
+                          </Link>
+                        ) : (
+                          <Link to="#">
+                            {menu.label}
+                          </Link>
+                        )}
+
+                        {menu.children && (
+                          <ul className="sub-menu">
+                            {menu.children.map((child, i) => (
+                              <li key={i}>
+                                <Link to={child.to}>
+                                  {child.label}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                </nav>
+              </div>
+            </div>
+
+            {/* Right */}
+            <div className="ht-menu-right">
+              <Link
+                to="/contact"
+                className="ht-btn d-none d-lg-block"
+              >
+                lets get in touch
+              </Link>
+
+              <button className="ht-menu-btn d-lg-none offcanvas-toggle">
+                <i className="fa-solid fa-bars-staggered" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  );
+}
