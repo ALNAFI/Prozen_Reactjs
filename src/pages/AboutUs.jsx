@@ -16,7 +16,13 @@ export default function AboutUs() {
       <Offcanvas />
       <Breadcrumb title="About Us" />
       <AboutArea />
-      <ProcessArea />
+      <ProcessArea
+        bgColor="ht-process-area inner-two"
+        titleColor=""
+        subtitleColor=""
+        descriptionColor="ht-process-item two"
+        shape="images/shape/3.svg"
+      />
       <StatsArea />
       <ChooseArea />
       <TeamArea />

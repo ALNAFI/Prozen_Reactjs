@@ -1,4 +1,5 @@
 import { teamDetailsData } from "../../../data/teamAndDetailsData";
+import { Link } from "react-router-dom";
 
 export default function TeamDetailsArea() {
   const { profile, about, skills } = teamDetailsData;
@@ -22,27 +23,27 @@ export default function TeamDetailsArea() {
                   <h6>{profile.role}</h6>
                   <p>{profile.shortBio}</p>
 
-                  <a className="tl" href={`tel:${profile.phone}`}>
+                  <Link className="tl" to={`tel:${profile.phone}`}>
                     <i className="fa-solid fa-phone" />{" "}
                     {profile.phone}
-                  </a>
+                  </Link>
 
-                  <a
+                  <Link
                     className="tl"
-                    href={`mailto:${profile.email}`}
+                    to={`mailto:${profile.email}`}
                   >
                     <i className="fa-solid fa-envelope" />{" "}
                     {profile.email}
-                  </a>
+                  </Link>
 
                   <ul className="team-social">
                     {profile.socials.map((icon) => (
                       <li key={icon}>
-                        <a href="#">
+                        <Link to="#">
                           <i
                             className={`fa-brands fa-${icon}`}
                           />
-                        </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>

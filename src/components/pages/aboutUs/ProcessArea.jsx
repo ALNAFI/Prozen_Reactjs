@@ -1,10 +1,16 @@
 import { processData } from "../../../data/aboutUsData";
 
-export default function ProcessArea() {
-  const { shape, subtitle, title1, title2, steps } = processData;
+export default function ProcessArea({
+  bgColor = "",
+  titleColor = "",
+  subtitleColor = "",
+  descriptionColor = "",
+  shape = "",
+}) {
+  const {  subtitle, title1, title2, steps } = processData;
 
   return (
-    <section className="ht-process-area inner-two fix section-padding">
+    <section className={`fix section-padding ${bgColor}`}>
       {/* Shape */}
       <div className="ht-process-shape">
         <img src={shape} alt="shape" />
@@ -14,14 +20,14 @@ export default function ProcessArea() {
         {/* Section title */}
         <div className="section-title text-center">
           <span
-            className="subtitle wow fadeInUp"
+            className={`subtitle wow fadeInUp ${subtitleColor}`}
             data-wow-delay=".2s"
           >
             {subtitle}
           </span>
 
           <h2
-            className="title wow fadeInUp"
+            className={`title wow fadeInUp ${titleColor}`}
             data-wow-delay=".5s"
           >
             {title1} <br /> {title2}
@@ -37,7 +43,7 @@ export default function ProcessArea() {
                 className="col-lg-3 col-md-6 col-sm-12 wow fadeInUp"
                 data-wow-delay={item.delay}
               >
-                <div className="ht-process-item two mt-25">
+                <div className={`mt-25 ${descriptionColor}`}>
                   <span className="step">{item.step}</span>
                   <h3 className="title">{item.title}</h3>
                   <p>{item.description}</p>

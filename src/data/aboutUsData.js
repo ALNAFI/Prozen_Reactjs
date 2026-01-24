@@ -11,7 +11,6 @@ export const aboutData = {
 };
 
 export const processData = {
-  shape: "/images/shape/3.svg",
   subtitle: "Working process",
   title1: "We make things easy ",
   title2: " for you to start",

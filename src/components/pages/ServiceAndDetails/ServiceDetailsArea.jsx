@@ -1,6 +1,7 @@
 
 import Services from '../blogListAndDetails/Services'
 import { servicesData } from "../../../data/serviceAndDetailsData";
+import { Link } from "react-router-dom";
 
 export default function ServiceDetailsArea() {
   return (
@@ -18,7 +19,7 @@ export default function ServiceDetailsArea() {
                                 <div className="content">
                                     <h3>Don't hesitate to contact us</h3>
                                     <p>At our IT solution company, we are committed to exceptional</p>
-                                    <a href="contact.html" className="ct-btn">Get in Touch</a>
+                                    <Link to="/contact" className="ct-btn">Get in Touch</Link>
                                 </div>
                             </div>
                         </div>
