@@ -11423,7 +11423,8 @@ span {
   border-color: transparent;
 }
 .ht-sidebar-area .single-widget .tags-list {
-  display: inline-block;
+  display: flex;
+  flex-wrap: wrap;
 }
 .ht-sidebar-area .single-widget .tags-list a {
   border-right: 1px solid var(--ht-theme-color);
@@ -11443,6 +11444,7 @@ span {
 .ht-sidebar-area .single-widget .tags-list a:not(:last-child) {
   margin-bottom: 15px;
 }
+
 
 .ht-error-page-area .error-content {
   text-align: center;
