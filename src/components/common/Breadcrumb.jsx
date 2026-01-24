@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-export default function Breadcrumb({ breadcrumbData }) {
-  if (!breadcrumbData) return null;
-  const { title, current } = breadcrumbData;
+export default function Breadcrumb({ title }) {
+  if (!title) return null;
+
   return (
     <section className="ht-breadcrumb-area">
       <div className="container">
@@ -17,7 +17,7 @@ export default function Breadcrumb({ breadcrumbData }) {
               <i className="fa-solid fa-chevron-right" />
             </li>
 
-            <li className="active">{current}</li>
+            <li className="active">{title}</li>
           </ul>
         </div>
       </div>

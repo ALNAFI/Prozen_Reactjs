@@ -22,9 +22,9 @@ export default function Footer() {
             <ul className="footer-social">
               {footerSocialLinks.map((item, index) => (
                 <li key={index}>
-                  <a href={item.to}>
+                  <Link to={item.to}>
                     <i className={`fa-brands ${item.icon}`} />
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

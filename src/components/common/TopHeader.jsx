@@ -1,5 +1,5 @@
+import { Link } from "react-router-dom";
 import { topHeaderData } from "../../data/topHeaderData";
-
 export default function TopHeader() {
   const { address, contacts } = topHeaderData;
 
@@ -20,7 +20,7 @@ export default function TopHeader() {
               {contacts.map((item, index) => (
                 <li key={index}>
                   <i className={`fa-solid ${item.icon}`} />
-                  <a href={item.href}>{item.label}</a>
+                  <Link to={item.href}>{item.label}</Link>
                 </li>
               ))}
             </ul>
