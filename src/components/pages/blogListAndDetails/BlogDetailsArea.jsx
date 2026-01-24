@@ -5,6 +5,7 @@ import RecentPosts from "./RecentPosts";
 import { blogDetailsData } from "../../../data/blogListAndDetailsData";
 import Search from "./Search";
 import Form from "./Form";
+import { servicesData } from "../../../data/blogListAndDetailsData";
 
 export default function BlogDetailsArea() {
   const { hero, paragraphs, quote, gallery, tags, social, author, comments } =
@@ -131,7 +132,7 @@ export default function BlogDetailsArea() {
             <div className="ht-sidebar-area">
               <Search />
               <RecentPosts />
-              <Services />
+              <Services servicesData={servicesData} />
               <Tags />
             </div>
           </div>

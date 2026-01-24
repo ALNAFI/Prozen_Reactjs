@@ -1,0 +1,52 @@
+import { processData } from "../../../data/aboutUsData";
+
+export default function ProcessArea() {
+  const { shape, subtitle, title1, title2, steps } = processData;
+
+  return (
+    <section className="ht-process-area inner-two fix section-padding">
+      {/* Shape */}
+      <div className="ht-process-shape">
+        <img src={shape} alt="shape" />
+      </div>
+
+      <div className="container">
+        {/* Section title */}
+        <div className="section-title text-center">
+          <span
+            className="subtitle wow fadeInUp"
+            data-wow-delay=".2s"
+          >
+            {subtitle}
+          </span>
+
+          <h2
+            className="title wow fadeInUp"
+            data-wow-delay=".5s"
+          >
+            {title1} <br /> {title2}
+          </h2>
+        </div>
+
+        {/* Steps */}
+        <div className="ht-process-wrapper">
+          <div className="row justify-content-between">
+            {steps.map((item) => (
+              <div
+                key={item.id}
+                className="col-lg-3 col-md-6 col-sm-12 wow fadeInUp"
+                data-wow-delay={item.delay}
+              >
+                <div className="ht-process-item two mt-25">
+                  <span className="step">{item.step}</span>
+                  <h3 className="title">{item.title}</h3>
+                  <p>{item.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

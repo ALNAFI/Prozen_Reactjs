@@ -4,6 +4,7 @@ import RecentPosts from "./RecentPosts";
 import Services from "./Services";
 import Tags from "./Tags";
 import { blogListPostsData } from "../../../data/blogListAndDetailsData";
+import { servicesData } from "../../../data/blogListAndDetailsData";
 
 export default function BlogListArea() {
   return (
@@ -79,7 +80,7 @@ export default function BlogListArea() {
             <div className="ht-sidebar-area">
               <Search />
               <RecentPosts />
-              <Services />
+              <Services servicesData={servicesData} />
               <Tags />
             </div>
           </div>

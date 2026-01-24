@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
-import { servicesData } from "../../../data/blogListAndDetailsData";
-export default function Services() {
+export default function Services({servicesData}) {
   return (
     <div className="single-widget">
       <h4 className="widget-title">Services</h4>
