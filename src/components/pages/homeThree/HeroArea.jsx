@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function HeroArea() {
   return (
     <section
@@ -20,13 +22,13 @@ export default function HeroArea() {
               of mind that <br />
               comes with knowing you're with covered Potenti nullam{" "}
             </p>
-            <a
-              href="contact.html"
+            <Link
+              to="/contact"
               className="ht-btn style-2 wow fadeInUp"
               data-wow-delay=".9s"
             >
               Let's Get in Touch
-            </a>
+            </Link>
           </div>
           <div className="video-card wow fadeInUp" data-wow-delay=".3s">
             <div className="swiper hero-img-slide">
@@ -55,12 +57,12 @@ export default function HeroArea() {
             <div className="play-icon">
               <img src="images/hero/text-spiner.png" alt="text" />
               <div className="icon">
-                <a
-                  href="https://www.youtube.com/watch?v=axzocwX0rEo"
+                <Link
+                  to="https://www.youtube.com/watch?v=axzocwX0rEo"
                   className="video-popup"
                 >
                   <i className="fa-solid fa-play"></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
