@@ -20,7 +20,7 @@ export default function Home() {
       <Offcanvas />
       <HeroArea />
       <ServicesArea />
-      <AboutArea />
+      <AboutArea image="/images/about/1.jpg" />
       <StatsArea />
       <ProjectArea />
       <ProcessArea

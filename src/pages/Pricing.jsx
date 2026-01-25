@@ -11,7 +11,7 @@ export default function Pricing() {
       <Header />
       <Offcanvas />
       <Breadcrumb title="Pricing Plan" />
-      <PricingArea />
+      <PricingArea pad="pb-0" />
       <FaqAreas />
       <Footer />
     </>

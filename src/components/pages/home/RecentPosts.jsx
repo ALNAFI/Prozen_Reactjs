@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function RecentPosts({
   data,
   variant = "v1",
-  sectionClassName = "ht-blog-area section-padding fix",
+  sectionClassName = "ht-blog-area section-padding fix ",
 }) {
   const { section, posts } = data;
   const isV2 = variant === "v2";

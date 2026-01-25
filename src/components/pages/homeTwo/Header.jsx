@@ -34,7 +34,7 @@ export default function Header() {
                           {menu.to ? (
                             <Link to={menu.to}>{menu.label}</Link>
                           ) : (
-                            <a href="#">{menu.label}</a>
+                            <Link to="#">{menu.label}</Link>
                           )}
 
                           {/* Dropdown */}

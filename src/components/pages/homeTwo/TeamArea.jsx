@@ -49,9 +49,9 @@ export default function TeamArea() {
 
                           <div className="social-wrapper">
                             {socials.map((social) => (
-                              <a key={social.id} href={social.link}>
+                              <Link key={social.id} to={social.link}>
                                 <i className={`fa-brands ${social.icon}`}></i>
-                              </a>
+                              </Link>
                             ))}
                           </div>
                         </div>

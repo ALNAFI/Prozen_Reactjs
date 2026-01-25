@@ -27,11 +27,11 @@ export default function Footer() {
                 </p>
 
                 <ul className="footer-social">
-                  {footerSocialLinks.map((item) => (
-                    <li key={item.id}>
-                      <a href={item.path}>
+                  {footerSocialLinks.map((item,index) => (
+                    <li key={index}>
+                      <Link to={item.path}>
                         <i className={`fa-brands ${item.icon}`}></i>
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>

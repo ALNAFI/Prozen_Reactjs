@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function HeroArea() {
   return (
     <section className="ht-hero-area hero-2">
@@ -16,13 +18,13 @@ export default function HeroArea() {
                   Agilos helps you to convert your data into rategic asset emand
                   get top-notch your business insights.
                 </p>
-                <a
-                  href="contact.html"
+                <Link
+                  to="/contact"
                   className="ht-btn style-2 wow fadeInUp"
                   data-wow-delay=".6s"
                 >
                   Let's Get in Touch
-                </a>
+                </Link>
               </div>
             </div>
             <div className="col-lg-7">

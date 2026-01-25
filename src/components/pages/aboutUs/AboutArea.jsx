@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { aboutData } from "../../../data/aboutUsData";
 
-export default function AboutArea() {
-  const { image, subtitle, title, description, button } = aboutData;
+export default function AboutArea({ image }) {
+  const { subtitle, title, description, button } = aboutData;
 
   return (
     <section className="ht-about-area section-padding fix">

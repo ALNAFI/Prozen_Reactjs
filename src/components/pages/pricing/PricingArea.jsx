@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import { pricingData } from "../../../data/pricingData";
 
-export default function PricingArea() {
+export default function PricingArea({pad=""}) {
   const { section, plans } = pricingData;
 
   return (
-    <section className="ht-price-area section-padding pb-0">
+    <section className={`ht-price-area section-padding ${pad}`}>
       <div className="container">
         <div className="ht-price-wrapper">
           <div className="row">

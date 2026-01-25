@@ -1,5 +1,4 @@
 export const aboutData = {
-  image: "/images/about/1.jpg",
   subtitle: "About company",
   title: "We committed to helping you achieve your goals",
   description:

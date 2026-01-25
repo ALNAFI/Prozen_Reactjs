@@ -65,7 +65,8 @@ export const projectData = [
 export const recentPostsData = {
   section: {
     subtitle: "recent posts",
-    title: "Read our latest news and articles",
+    title1: "Read our latest news",
+    title2: " and articles",
   },
   posts: [
     {
