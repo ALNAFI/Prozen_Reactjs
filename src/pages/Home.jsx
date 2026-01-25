@@ -11,7 +11,7 @@ import StatsArea from "../components/pages/aboutUs/StatsArea";
 import HeroArea from "../components/pages/home/HeroArea";
 import ServicesArea from "../components/pages/home/ServicesArea";
 import ProjectArea from "../components/pages/home/ProjectArea";
-
+import { recentPostsData } from "../data/homeData";
 export default function Home() {
   return (
     <>
@@ -32,7 +32,7 @@ export default function Home() {
       />
       <TeamArea />
       <TestimonialsArea />
-      <RecentPosts />
+      <RecentPosts data={recentPostsData} variant="v1" />
       <Footer />
     </>
   );

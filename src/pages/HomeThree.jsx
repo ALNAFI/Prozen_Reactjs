@@ -1,4 +1,5 @@
 import Offcanvas from "../components/common/Offcanvas";
+import Search from "../components/ui/Search";
 
 export default function HomeThree() {
   return (
@@ -119,29 +120,7 @@ export default function HomeThree() {
       </header>
       {/* ht-header-area end */}
 
-      {/* Search Overlay */}
-      <div className="ht-header-search-bar d-flex align-items-center justify-content-center">
-        <button className="ht-search-close">x</button>
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-6">
-              <div className="ht-search-bar">
-                <h3 className="ht-search-title text-center mb-20">
-                  What are you looking for?
-                </h3>
-                <div className="ht-form-box ht-search-form-box">
-                  <form action="#">
-                    <input type="text" placeholder="Your Keywords..." />
-                    <button type="submit">
-                      <i className="fa fa-search"></i>
-                    </button>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Search />
 
       <Offcanvas />
       {/* ht-hero-3-area-start */}
