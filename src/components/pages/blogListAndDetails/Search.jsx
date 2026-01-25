@@ -1,10 +1,9 @@
-import React from "react";
 
 export default function Search() {
   return (
     <div className="single-widget">
       <h4 className="widget-title">Search</h4>
-      <form action="#">
+      <form onSubmit={(e) => e.preventDefault()}>
         <div className="search-box">
           <input type="text" placeholder="Type to search..." />
           <button type="submit">

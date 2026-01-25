@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useInputForm } from "../../../hooks/useInputForm";
 import {
   footerQuickLinks,
   footerServiceLinks,
@@ -8,6 +9,9 @@ import { footerSocialLinks } from "../../../data/footerData";
 import { getCurrentYear } from "../../../utils/getCurrentYear";
 
 export default function Footer() {
+  const { register, handleSubmit, errors, isSubmitting, formStatus } =
+    useInputForm();
+
   return (
     <footer className="ht-footer-area fix">
       <div className="container">
@@ -27,7 +31,7 @@ export default function Footer() {
                 </p>
 
                 <ul className="footer-social">
-                  {footerSocialLinks.map((item,index) => (
+                  {footerSocialLinks.map((item, index) => (
                     <li key={index}>
                       <Link to={item.path}>
                         <i className={`fa-brands ${item.icon}`}></i>
@@ -70,12 +74,42 @@ export default function Footer() {
                   className="widget-subscriber wow fadeInUp"
                   data-wow-delay="1.2s"
                 >
-                  <form>
+                  <form onSubmit={handleSubmit}>
                     <h5>Subscribe for updates and exclusive offers!</h5>
-                    <input type="email" placeholder="Your Email" />
-                    <button type="submit">
-                      <i className="fa-solid fa-arrow-right"></i>
+                    <input
+                      type="email"
+                      placeholder="Your Email"
+                      {...register("email", {
+                        required: "Email is required",
+                        pattern: {
+                          value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                          message: "Invalid email address",
+                        },
+                      })}
+                    />
+                    <button type="submit" disabled={isSubmitting}>
+                      {isSubmitting ? (
+                        <i className="fa-solid fa-spinner fa-spin"></i>
+                      ) : (
+                        <i className="fa-solid fa-arrow-right"></i>
+                      )}
                     </button>
+                    {errors.email && (
+                      <span className="text-danger small mt-1 d-block">
+                        {errors.email.message}
+                      </span>
+                    )}
+                    {formStatus.message && (
+                      <div
+                        className={`mt-2 small ${
+                          formStatus.type === "success"
+                            ? "text-success"
+                            : "text-danger"
+                        }`}
+                      >
+                        {formStatus.message}
+                      </div>
+                    )}
                   </form>
                 </div>
               </div>

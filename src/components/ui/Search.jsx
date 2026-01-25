@@ -10,7 +10,7 @@ export default function Search() {
                 What are you looking for?
               </h3>
               <div className="ht-form-box ht-search-form-box">
-                <form action="#">
+                <form onSubmit={(e) => e.preventDefault()}>
                   <input type="text" placeholder="Your Keywords..." />
                   <button type="submit">
                     <i className="fa fa-search"></i>
