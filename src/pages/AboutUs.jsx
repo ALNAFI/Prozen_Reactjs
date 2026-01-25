@@ -15,7 +15,7 @@ export default function AboutUs() {
       <Header />
       <Offcanvas />
       <Breadcrumb title="About Us" />
-      <AboutArea />
+      <AboutArea image="/images/about/1.jpg"/>
       <ProcessArea
         bgColor="ht-process-area inner-two"
         titleColor=""
