@@ -5,7 +5,7 @@ export const blogData = [
     date: "June 16, 2024",
     category: "Business",
     image: "/images/blog/13.jpg",
-    link: "/blog-details",
+    link: "/blogdetails",
     delay: ".2s",
   },
   {
@@ -14,7 +14,7 @@ export const blogData = [
     date: "June 16, 2024",
     category: "Business",
     image: "/images/blog/14.jpg",
-    link: "/blog-details",
+    link: "/blogdetails",
     delay: ".4s",
   },
   {
@@ -23,7 +23,7 @@ export const blogData = [
     date: "June 16, 2024",
     category: "Business",
     image: "/images/blog/15.jpg",
-    link: "/blog-details",
+    link: "/blogdetails",
     delay: ".6s",
   },
   {
@@ -32,7 +32,7 @@ export const blogData = [
     date: "June 16, 2024",
     category: "Business",
     image: "/images/blog/16.jpg",
-    link: "/blog-details",
+    link: "/blogdetails",
     delay: ".8s",
   },
   {
@@ -41,7 +41,7 @@ export const blogData = [
     date: "June 16, 2024",
     category: "Business",
     image: "/images/blog/17.jpg",
-    link: "/blog-details",
+    link: "/blogdetails",
     delay: "1s",
   },
   {
@@ -50,7 +50,7 @@ export const blogData = [
     date: "June 16, 2024",
     category: "Business",
     image: "/images/blog/18.jpg",
-    link: "/blog-details",
+    link: "/blogdetails",
     delay: "1.2s",
   },
   {
@@ -59,7 +59,7 @@ export const blogData = [
     date: "June 16, 2024",
     category: "Business",
     image: "/images/blog/19.jpg",
-    link: "/blog-details",
+    link: "/blogdetails",
     delay: "1.4s",
   },
   {
@@ -68,7 +68,7 @@ export const blogData = [
     date: "June 16, 2024",
     category: "Business",
     image: "/images/blog/20.jpg",
-    link: "/blog-details",
+    link: "/blogdetails",
     delay: "1.6s",
   },
   {
@@ -77,7 +77,7 @@ export const blogData = [
     date: "June 16, 2024",
     category: "Business",
     image: "/images/blog/21.jpg",
-    link: "/blog-details",
+    link: "/blogdetails",
     delay: "1.8s",
   },
 ];

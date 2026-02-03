@@ -240,7 +240,7 @@ export const recentPostsPage2Data = {
       date: "June 16, 2024",
       category: "Business solution",
       title: "Profitable business makes to you happy and growth",
-      link: "/blog-details",
+      link: "/blogdetails",
       delay: ".3s",
     },
     {
@@ -249,7 +249,7 @@ export const recentPostsPage2Data = {
       date: "27 May, 2024",
       category: "Marketing solution",
       title: "Securing Funding for Your Startup: Expert Tips",
-      link: "/blog-details",
+      link: "/blogdetails",
       delay: ".6s",
     },
     {
@@ -258,7 +258,7 @@ export const recentPostsPage2Data = {
       date: "June 16, 2024",
       category: "Business solution",
       title: "Strong Corporate Financial Model: Best Practices",
-      link: "/blog-details",
+      link: "/blogdetails",
       delay: ".9s",
     },
   ],

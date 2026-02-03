@@ -4,28 +4,28 @@ export const recentPostsData = [
     title: "Dynamic Solutions for Business Success",
     date: "April 01, 2022",
     image: "/images/blog/25.jpg",
-    link: "/blog-details",
+    link: "/blogdetails",
   },
   {
     id: 2,
     title: "What Consultants Need to Know About Nonprofits",
     date: "April 01, 2022",
     image: "/images/blog/26.jpg",
-    link: "/blog-details",
+    link: "/blogdetails",
   },
   {
     id: 3,
     title: "Why Collaborative Coding Is the Ultimate Career ...",
     date: "April 01, 2022",
     image: "/images/blog/27.jpg",
-    link: "/blog-details",
+    link: "/blogdetails",
   },
   {
     id: 4,
     title: "All You Need to Know About Agency",
     date: "April 01, 2022",
     image: "/images/blog/28.jpg",
-    link: "/blog-details",
+    link: "/blogdetails",
   },
 ];
 
@@ -58,7 +58,7 @@ export const blogListPostsData = [
     title: "What Consultants Need to Know About Nonprofits",
     excerpt:
       "The European languag are member of the same family. Their separate existence is a myth. Europe Europe science, music, sport, etc, Europe uses the same vocabulary. The languages only differ in their their grammar, their and their most common words.",
-    link: "/blog-details",
+    link: "/blogdetails",
     meta: [
       { icon: "/images/icon/user.svg", text: "By Admin" },
       { icon: "/images/icon/comment-2.svg", text: "Comment (03)" },
@@ -71,7 +71,7 @@ export const blogListPostsData = [
     title: "What Consultants Need to Know About Nonprofits",
     excerpt:
       "The European languag are member of the same family. Their separate existence is a myth. Europe Europe science, music, sport, etc, Europe uses the same vocabulary. The languages only differ in their their grammar, their and their most common words.",
-    link: "/blog-details",
+    link: "/blogdetails",
     meta: [
       { icon: "/images/icon/user.svg", text: "By Admin" },
       { icon: "/images/icon/comment-2.svg", text: "Comment (03)" },
@@ -84,7 +84,7 @@ export const blogListPostsData = [
     title: "Why Collaborative Coding is The Ultimate Career Hack",
     excerpt:
       "The European languag are member of the same family. Their separate existence is a myth. Europe Europe science, music, sport, etc, Europe uses the same vocabulary. The languages only differ in their their grammar, their and their most common words.",
-    link: "/blog-details",
+    link: "/blogdetails",
     meta: [
       { icon: "/images/icon/user.svg", text: "By Admin" },
       { icon: "/images/icon/comment-2.svg", text: "Comment (03)" },

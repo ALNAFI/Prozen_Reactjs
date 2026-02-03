@@ -72,7 +72,7 @@ export const recentPostsData = {
       category: "Business",
       titleLine1: "Travel insurance tips for",
       titleLine2: "safety abroad",
-      link: "/blog-details",
+      link: "/blogdetails",
       delay: ".3s",
     },
     {
@@ -82,7 +82,7 @@ export const recentPostsData = {
       category: "Business",
       titleLine1: "Back-to-school coverage",
       titleLine2: "tips for kids.",
-      link: "/blog-details",
+      link: "/blogdetails",
       delay: ".6s",
     },
     {
@@ -92,7 +92,7 @@ export const recentPostsData = {
       category: "Business",
       titleLine1: "Tips for handling a car",
       titleLine2: "accident scene.",
-      link: "/blog-details",
+      link: "/blogdetails",
       delay: ".9s",
     },
   ],

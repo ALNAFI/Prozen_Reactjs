@@ -75,7 +75,7 @@ export const recentPostsData = {
       date: "June 16, 2024",
       category: "Business",
       title: "Building Your Own Personal Learning Curriculum",
-      link: "/blog-details",
+      link: "/blogdetails",
       delay: ".2s",
     },
     {
@@ -84,7 +84,7 @@ export const recentPostsData = {
       date: "June 16, 2024",
       category: "Business",
       title: "Seven Mistakes to Avoid in Your Technical Interviews",
-      link: "/blog-details",
+      link: "/blogdetails",
       delay: ".4s",
     },
     {
@@ -93,7 +93,7 @@ export const recentPostsData = {
       date: "June 16, 2024",
       category: "Business",
       title: "Why Collaborative Coding is The Ultimate Career Hack",
-      link: "/blog-details",
+      link: "/blogdetails",
       delay: ".6s",
     },
   ],
