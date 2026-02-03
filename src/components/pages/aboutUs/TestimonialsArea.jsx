@@ -79,7 +79,7 @@ export default function TestimonialsArea() {
                       slidesPerView: 1,
                     },
                   }}
-                  className="ht-testi-slider"
+                  
                 >
                   {items.map((item) => (
                     <SwiperSlide key={item.id}>

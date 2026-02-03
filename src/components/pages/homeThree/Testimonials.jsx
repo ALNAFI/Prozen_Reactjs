@@ -46,7 +46,7 @@ export default function Testimonials() {
                   nextEl: nextRef.current,
                 }}
                 onSwiper={setSwiper}
-                className="ht-testi-slider-3"
+                
               >
                 {testimonials.map((item) => (
                   <SwiperSlide key={item.id}>

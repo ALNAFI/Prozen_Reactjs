@@ -11,7 +11,6 @@ export default function Header() {
     <header className="ht-header-area">
       <div
         className={`ht-main-header header-3${isSticky ? " sticky" : ""}`}
-        id="header-sticky"
       >
         <div className="container-fluid">
           <div className="ht-menu-wrapper">

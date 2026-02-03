@@ -61,7 +61,7 @@ export default function Testimonials() {
               576: { slidesPerView: 1 },
               0: { slidesPerView: 1 },
             }}
-            className="ht-testi-slider-2"
+            
           >
             {items.map((item) => (
               <SwiperSlide key={item.id}>

@@ -73,7 +73,7 @@ export default function HeroArea() {
               loop={true}
               navigation={{ nextEl: nextRef.current }}
               onSwiper={setSwiper}
-              className="hero-img-slide"
+             
             >
               {HERO_SLIDES.map((slide) => (
                 <SwiperSlide key={slide.id}>

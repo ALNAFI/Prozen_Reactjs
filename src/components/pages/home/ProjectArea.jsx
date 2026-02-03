@@ -77,7 +77,7 @@ export default function ProjectArea() {
               576: { slidesPerView: 1 },
               0: { slidesPerView: 1 },
             }}
-            className="ht-project-slider"
+            
           >
             {projectData.map((project) => (
               <SwiperSlide key={project.id}>
