@@ -21,10 +21,11 @@ import NotFoundPage from "./pages/NotFoundPage";
 import BackToTop from "./components/ui/BackToTob";
 import Cursor from "./components/ui/Cursor";
 import ScrollToTop from "./components/ui/ScrollToTop";
-import { useLenis } from "./hooks/useLenis";
+import { LenisProvider } from "./contexts/LenisContext";
+
 export default function App() {
-  useLenis();
   return (
+    <LenisProvider>
     <BrowserRouter>
       <OffcanvasProvider>
         <Routes>
@@ -53,5 +54,6 @@ export default function App() {
         <Cursor />
       </OffcanvasProvider>
     </BrowserRouter>
+    </LenisProvider>
   );
 }
