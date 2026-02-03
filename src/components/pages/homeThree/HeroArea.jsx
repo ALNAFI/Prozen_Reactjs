@@ -1,11 +1,45 @@
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+
+const HERO_BG = "images/hero/hero-bg-3.jpg";
+const HERO_SLIDES = [
+  { id: 1, src: "images/hero/3.jpg", alt: "Hero" },
+  { id: 2, src: "images/hero/3.jpg", alt: "Hero" },
+  { id: 3, src: "images/hero/3.jpg", alt: "Hero" },
+];
 
 export default function HeroArea() {
+  const [bgStyle, setBgStyle] = useState({});
+  const nextRef = useRef(null);
+  const [swiper, setSwiper] = useState(null);
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = HERO_BG;
+    img.onload = () => {
+      setBgStyle({
+        backgroundImage: `url(${HERO_BG})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      });
+    };
+  }, []);
+
+  useEffect(() => {
+    if (swiper && nextRef.current) {
+      swiper.params.navigation.nextEl = nextRef.current;
+      swiper.navigation.init();
+      swiper.navigation.update();
+    }
+  }, [swiper]);
+
   return (
-    <section
-      className="ht-hero-area hero-3"
-      data-bg-src="images/hero/hero-bg-3.jpg"
-    >
+    <section className="ht-hero-area hero-3" style={bgStyle}>
       <div className="ht-hero-shape">
         <div className="arrow-shape-3 float-bob-y">
           <img src="images/shape/7.svg" alt="shape" />
@@ -31,28 +65,34 @@ export default function HeroArea() {
             </Link>
           </div>
           <div className="video-card wow fadeInUp" data-wow-delay=".3s">
-            <div className="swiper hero-img-slide">
-              <div className="swiper-wrapper">
-                <div className="swiper-slide">
+            <Swiper
+              modules={[Navigation]}
+              slidesPerView={1}
+              spaceBetween={30}
+              speed={1000}
+              loop={true}
+              navigation={{ nextEl: nextRef.current }}
+              onSwiper={setSwiper}
+              className="hero-img-slide"
+            >
+              {HERO_SLIDES.map((slide) => (
+                <SwiperSlide key={slide.id}>
                   <div className="thumb">
-                    <img src="images/hero/3.jpg" alt="" />
+                    <img src={slide.src} alt={slide.alt} />
                   </div>
-                </div>
-                <div className="swiper-slide">
-                  <div className="thumb">
-                    <img src="images/hero/3.jpg" alt="" />
-                  </div>
-                </div>
-                <div className="swiper-slide">
-                  <div className="thumb">
-                    <img src="images/hero/3.jpg" alt="" />
-                  </div>
-                </div>
-              </div>
-            </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
             <div className="txt">
               <span>Featured Services</span>
-              <i className="fa-solid fa-arrow-right-long ht-hero-next"></i>
+              <i
+                ref={nextRef}
+                className="fa-solid fa-arrow-right-long ht-hero-next"
+                onClick={() => swiper?.slideNext()}
+                onKeyDown={(e) => e.key === "Enter" && swiper?.slideNext()}
+                role="button"
+                tabIndex={0}
+              />
             </div>
             <div className="play-icon">
               <img src="images/hero/text-spiner.png" alt="text" />

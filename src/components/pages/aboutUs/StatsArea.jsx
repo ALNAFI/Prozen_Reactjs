@@ -1,4 +1,25 @@
+import { memo } from "react";
+import { useCountUp } from "../../../hooks/useCountUp";
 import { statsData } from "../../../data/aboutUsData";
+
+// Sub-component for individual stat item with counter animation
+const StatItem = memo(({ stat }) => {
+  const { count, countRef } = useCountUp(stat.value, 4000, 500);
+  const displayValue = stat.value % 1 === 0 ? Math.floor(count) : count.toFixed(1);
+
+  return (
+    <div className="ht-stats-items" ref={countRef}>
+      <h2 className="number">
+        <span className="count">{displayValue}</span>
+        {stat.suffix}
+      </h2>
+      <h4>{stat.title}</h4>
+      <p>{stat.description}</p>
+    </div>
+  );
+});
+
+StatItem.displayName = "StatItem";
 
 export default function StatsArea() {
   return (
@@ -6,14 +27,7 @@ export default function StatsArea() {
       <div className="container">
         <div className="ht-stats-wrapper wow fadeInUp" data-wow-delay=".3s">
           {statsData.map((stat) => (
-            <div className="ht-stats-items" key={stat.id}>
-              <h2 className="number">
-                <span className="count">{stat.value}</span>
-                {stat.suffix}
-              </h2>
-              <h4>{stat.title}</h4>
-              <p>{stat.description}</p>
-            </div>
+            <StatItem key={stat.id} stat={stat} />
           ))}
         </div>
       </div>

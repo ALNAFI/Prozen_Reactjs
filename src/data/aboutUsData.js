@@ -168,6 +168,14 @@ export const testimonialsAreaData = {
       name: "John Smith",
       role: "Head of Developer",
     },
+    {
+      id: 2,
+      rating: 5,
+      text: "Guidance transformed the way we business. Their innovative solutions and forward-thinking approach revitalized our organization. The results for themselves, and we couldn't be happier with the outcome. Trusting Guidance was a wise investment in our future.",
+      avatar: "/images/testimonials/1.png",
+      name: "John Smith",
+      role: "Head of Developer",
+    },
     
   ],
 };

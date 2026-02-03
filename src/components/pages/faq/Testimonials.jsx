@@ -1,7 +1,15 @@
+import { useRef } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
 import { testimonialsData } from "../../../data/faqData";
 
 export default function Testimonials() {
   const { subtitle, title, items } = testimonialsData;
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
+
   return (
     <section className="ht-testimonials-area-2 section-padding">
       <div className="container">
@@ -17,10 +25,10 @@ export default function Testimonials() {
           </div>
 
           <div className="ht-testi-btn mt-0 wow fadeInUp" data-wow-delay=".6s">
-            <button className="ht-testi-prev ht-testi-prev-2">
+            <button ref={prevRef} className="ht-testi-prev ht-testi-prev-2">
               <i className="fa-solid fa-chevron-left" />
             </button>
-            <button className="ht-testi-next ht-testi-next-2">
+            <button ref={nextRef} className="ht-testi-next ht-testi-next-2">
               <i className="fa-solid fa-chevron-right" />
             </button>
           </div>
@@ -28,10 +36,35 @@ export default function Testimonials() {
 
         {/* Slider */}
         <div className="ht-testimonials-wrapper-2">
-          <div className="swiper ht-testi-slider-2">
-            <div className="swiper-wrapper">
-              {items.map((item) => (
-                <div className="swiper-slide" key={item.id}>
+          <Swiper
+            modules={[Navigation, Autoplay]}
+            spaceBetween={30}
+            slidesPerView={3}
+            speed={2000}
+            loop={true}
+            autoplay={{
+              delay: 3500,
+              disableOnInteraction: false,
+            }}
+            navigation={{
+              prevEl: prevRef.current,
+              nextEl: nextRef.current,
+            }}
+            onBeforeInit={(swiper) => {
+              swiper.params.navigation.prevEl = prevRef.current;
+              swiper.params.navigation.nextEl = nextRef.current;
+            }}
+            breakpoints={{
+              1200: { slidesPerView: 3 },
+              992: { slidesPerView: 2 },
+              768: { slidesPerView: 2 },
+              576: { slidesPerView: 1 },
+              0: { slidesPerView: 1 },
+            }}
+            className="ht-testi-slider-2"
+          >
+            {items.map((item) => (
+              <SwiperSlide key={item.id}>
                   <div className="ht-testimonials-item ht-testimonials-item-2">
                     {/* Stars */}
                     <div className="star">
@@ -52,10 +85,9 @@ export default function Testimonials() {
                       </div>
                     </div>
                   </div>
-                </div>
-              ))}
-            </div>
-          </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </div>
     </section>

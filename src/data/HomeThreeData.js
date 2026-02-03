@@ -109,7 +109,14 @@ export const testimonialsData = {
       name: "Joshua liddell",
       role: "Agency owner",
     },
-    // add more testimonials here
+    {
+      id: 2,
+      text:
+        "It’s a pleasure working with Bunker our new brand positioning guidelines and translated them beautifully and consistently into our on-going marketing comms",
+      name: "Joshua liddell",
+      role: "Agency owner",
+    },
+    
   ],
 };
 export const servicesInsuranceData = {

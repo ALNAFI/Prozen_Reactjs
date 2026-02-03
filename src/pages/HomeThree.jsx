@@ -10,9 +10,11 @@ import HeroArea from "../components/pages/homeThree/HeroArea";
 import ServicesArea from "../components/pages/homeThree/ServicesArea";
 import AboutArea from "../components/pages/aboutUs/AboutArea";
 import ProcessArea from "../components/pages/homeThree/ProcessArea";
+import Preloader from "../components/ui/Preloader";
 export default function HomeThree() {
   return (
     <>
+    <Preloader />
       <Header />
       <Search />
       <Offcanvas />

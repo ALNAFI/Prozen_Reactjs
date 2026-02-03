@@ -73,6 +73,9 @@ export const servicesAreaData = {
     { id: 1, text: "FREE CONSULTATION" },
     { id: 2, text: "BUSINESS CONSULTANT" },
     { id: 3, text: "BUSINESS GROWING" },
+    { id: 4, text: "FREE CONSULTATION" },
+    { id: 5, text: "BUSINESS CONSULTANT" },
+    { id: 6, text: "BUSINESS GROWING" },
   ],
 };
 export const aboutAreaData = {

@@ -80,16 +80,6 @@
       $('.body-overlay').removeClass('opened');
     });
 
-    //>> Sticky Header Js Start <<//
-
-    // $(window).scroll(function () {
-    //   if ($(this).scrollTop() > 250) {
-    //     $('#header-sticky').addClass('sticky');
-    //   } else {
-    //     $('#header-sticky').removeClass('sticky');
-    //   }
-    // });
-
     //>> Video Popup Start <<//
     $('.img-popup').magnificPopup({
       type: 'image',
@@ -238,20 +228,7 @@
       });
     }
 
-    //>> Data Background Image Start <<//
-    $('[data-bg-src]').each(function () {
-      var $this = $(this),
-        bg = $this.data('bg-src');
 
-      if (bg) {
-        $this.css({
-          'background-image': 'url(' + bg + ')',
-          'background-size': 'cover',
-          'background-position': 'center',
-          'background-repeat': 'no-repeat',
-        });
-      }
-    });
 
     $documentOn.on('click', '#back-top', function () {
       $('html, body').animate({ scrollTop: 0 }, 1);

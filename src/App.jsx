@@ -18,7 +18,7 @@ import TeamDetails from "./pages/TeamDetails";
 import NotFoundPage from "./pages/NotFoundPage";
 import BackToTop from "./components/ui/BackToTob";
 import Cursor from "./components/ui/Cursor";
-
+import ScrollToTop from "./components/ui/ScrollToTop";
 export default function App() {
   return (
     <BrowserRouter>
@@ -42,6 +42,7 @@ export default function App() {
         <Route path="/notfoundpage" element={<NotFoundPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
+      <ScrollToTop />
       <BackToTop />
       <Cursor />
     </BrowserRouter>

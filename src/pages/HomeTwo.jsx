@@ -12,10 +12,11 @@ import ServicesArea from "../components/pages/homeTwo/ServicesArea";
 import AboutArea from "../components/pages/homeTwo/AboutArea";
 import ProjectArea from "../components/pages/homeTwo/ProjectArea";
 import TeamArea from "../components/pages/homeTwo/TeamArea";
-
+import Preloader from "../components/ui/Preloader";
 export default function HomeTwo() {
   return (
     <>
+    <Preloader />
       <Header />
       <Search />
       <Offcanvas />

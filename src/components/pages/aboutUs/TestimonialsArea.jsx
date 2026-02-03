@@ -1,7 +1,24 @@
+import { useRef, useEffect, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
 import { testimonialsAreaData } from "../../../data/aboutUsData";
 
 export default function TestimonialsArea() {
   const { section, items } = testimonialsAreaData;
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
+  const [swiper, setSwiper] = useState(null);
+
+  useEffect(() => {
+    if (swiper && prevRef.current && nextRef.current) {
+      swiper.params.navigation.prevEl = prevRef.current;
+      swiper.params.navigation.nextEl = nextRef.current;
+      swiper.navigation.init();
+      swiper.navigation.update();
+    }
+  }, [swiper]);
   return (
     <section className="ht-testimonials-area section-padding pt-0">
       <div className="container">
@@ -20,10 +37,18 @@ export default function TestimonialsArea() {
               </div>
 
               <div className="ht-testi-btn">
-                <button className="ht-testi-prev">
+                <button 
+                  ref={prevRef} 
+                  className="ht-testi-prev"
+                  onClick={() => swiper?.slidePrev()}
+                >
                   <i className="fa-solid fa-chevron-left" />
                 </button>
-                <button className="ht-testi-next">
+                <button 
+                  ref={nextRef} 
+                  className="ht-testi-next"
+                  onClick={() => swiper?.slideNext()}
+                >
                   <i className="fa-solid fa-chevron-right" />
                 </button>
               </div>
@@ -32,11 +57,33 @@ export default function TestimonialsArea() {
             {/* Right */}
             <div className="col-lg-7">
               <div className="ht-testimonials-slider">
-                <div className="swiper ht-testi-slider">
-                  <div className="swiper-wrapper">
-                    {items.map((item) => (
-                      <div className="swiper-slide" key={item.id}>
-                        <div className="ht-testimonials-item">
+                <Swiper
+                  modules={[Navigation, Autoplay]}
+                  spaceBetween={30}
+                  speed={2000}
+                  loop={true}
+                  autoplay={{
+                    delay: 3500,
+                    disableOnInteraction: false,
+                  }}
+                  navigation={{
+                    prevEl: prevRef.current,
+                    nextEl: nextRef.current,
+                  }}
+                  onSwiper={setSwiper}
+                  breakpoints={{
+                    575: {
+                      slidesPerView: 1,
+                    },
+                    0: {
+                      slidesPerView: 1,
+                    },
+                  }}
+                  className="ht-testi-slider"
+                >
+                  {items.map((item) => (
+                    <SwiperSlide key={item.id}>
+                      <div className="ht-testimonials-item">
                           {/* Stars */}
                           <div className="star">
                             {Array.from({
@@ -57,11 +104,10 @@ export default function TestimonialsArea() {
                               <p className="role">{item.role}</p>
                             </div>
                           </div>
-                        </div>
                       </div>
-                    ))}
-                  </div>
-                </div>
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
               </div>
             </div>
             {/* right end */}

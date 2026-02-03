@@ -62,5 +62,32 @@ export const testimonialsData = {
       name: "Marvin McKinney",
       role: "Product Manager",
     },
+    {
+      id: 4,
+      rating: 5,
+      text:
+        "Working with Campaign was a game-changer for our business. Their expertise and strategies helped us reach new heights we never thought possible.",
+      avatar: "/images/testimonials/2.png",
+      name: "Ronald Richards",
+      role: "Finance Advisor",
+    },
+    {
+      id: 5,
+      rating: 5,
+      text:
+        "Working with Campaign was a game-changer for our business. Their expertise and strategies helped us reach new heights we never thought possible.",
+      avatar: "/images/testimonials/3.png",
+      name: "Charlize Theron",
+      role: "CEO & Owner",
+    },
+    {
+      id: 6,
+      rating: 5,
+      text:
+        "Working with Campaign was a game-changer for our business. Their expertise and strategies helped us reach new heights we never thought possible.",
+      avatar: "/images/testimonials/4.png",
+      name: "Marvin McKinney",
+      role: "Product Manager",
+    },
   ],
 };

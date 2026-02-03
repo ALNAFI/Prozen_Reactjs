@@ -1,4 +1,7 @@
 import { Link } from "react-router-dom";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
 import { servicesAreaData } from "../../../data/homeTwoData";
 
 export default function ServicesArea() {
@@ -70,18 +73,29 @@ export default function ServicesArea() {
 
       {/* Brand slider */}
       <div className="brand-slider">
-        <div className="swiper ht-brand-slider">
-          <div className="swiper-wrapper">
-            {slider.map((item) => (
-              <div key={item.id} className="swiper-slide">
-                <div className="brand-item">
-                  <h2>{item.text}</h2>
-                  <img src="images/icon/9.svg" alt="icon" />
-                </div>
+        <Swiper
+          modules={[Autoplay]}
+          slidesPerView={3}
+          spaceBetween={0}
+          loop={true}
+          speed={3000}
+          centeredSlides={true}
+          autoplay={{
+            delay: 0,
+            disableOnInteraction: false,
+          }}
+          allowTouchMove={true}
+          className="ht-brand-slider"
+        >
+          {slider.map((item) => (
+            <SwiperSlide key={item.id}>
+              <div className="brand-item">
+                <h2>{item.text}</h2>
+                <img src="images/icon/9.svg" alt="icon" />
               </div>
-            ))}
-          </div>
-        </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </section>
   );

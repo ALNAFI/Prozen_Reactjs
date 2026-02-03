@@ -1,5 +1,47 @@
+import { memo } from "react";
 import { Link } from "react-router-dom";
+import { useCountUp } from "../../../hooks/useCountUp";
 import { aboutAreaData } from "../../../data/homeTwoData";
+
+// Sub-component for review counter in image section
+const ReviewCounter = memo(({ review }) => {
+  const { count, countRef } = useCountUp(review.count, 4000, 0);
+  const displayValue = review.count % 1 === 0 ? Math.floor(count) : count.toFixed(1);
+
+  return (
+    <div className="client-review float-bob-y" ref={countRef}>
+      <h2>
+        <span className="count">{displayValue}</span>
+        {review.suffix}
+      </h2>
+      <p>{review.text}</p>
+    </div>
+  );
+});
+
+ReviewCounter.displayName = "ReviewCounter";
+
+// Sub-component for stat item with counter animation
+const StatItem = memo(({ item }) => {
+  const { count, countRef } = useCountUp(item.count, 4000, 0);
+  const displayValue = item.count % 1 === 0 ? Math.floor(count) : count.toFixed(1);
+
+  return (
+    <div
+      className="review-item wow fadeInUp"
+      data-wow-delay={item.delay}
+      ref={countRef}
+    >
+      <h2>
+        <span className="count">{displayValue}</span>
+        {item.suffix}
+      </h2>
+      <p>{item.label}</p>
+    </div>
+  );
+});
+
+StatItem.displayName = "StatItem";
 
 export default function AboutArea() {
   const { image, section, stats, button } = aboutAreaData;
@@ -17,13 +59,7 @@ export default function AboutArea() {
               >
                 <img src={image.src} alt={image.alt} />
 
-                <div className="client-review float-bob-y">
-                  <h2>
-                    <span className="count">{image.review.count}</span>
-                    {image.review.suffix}
-                  </h2>
-                  <p>{image.review.text}</p>
-                </div>
+                <ReviewCounter review={image.review} />
               </div>
             </div>
 
@@ -45,17 +81,7 @@ export default function AboutArea() {
                 {/* Stats */}
                 <div className="client-reviews">
                   {stats.map((item) => (
-                    <div
-                      key={item.id}
-                      className="review-item wow fadeInUp"
-                      data-wow-delay={item.delay}
-                    >
-                      <h2>
-                        <span className="count">{item.count}</span>
-                        {item.suffix}
-                      </h2>
-                      <p>{item.label}</p>
-                    </div>
+                    <StatItem key={item.id} item={item} />
                   ))}
                 </div>
 

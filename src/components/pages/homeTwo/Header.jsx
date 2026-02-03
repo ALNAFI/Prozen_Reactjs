@@ -1,10 +1,18 @@
 import { Link } from "react-router-dom";
 import { headerMenuData } from "../../../data/headerMenuData";
+import { useStickyHeader } from "../../../hooks/useStickyHeader";
+
+const STICKY_SCROLL_THRESHOLD = 250;
 
 export default function Header() {
+  const isSticky = useStickyHeader(STICKY_SCROLL_THRESHOLD);
+
   return (
     <header className="ht-header-area">
-      <div className="ht-main-header header-2" id="header-sticky">
+      <div
+        className={`ht-main-header header-2${isSticky ? " sticky" : ""}`}
+        id="header-sticky"
+      >
         <div className="container">
           <div className="ht-menu-wrapper">
             {/* Left */}

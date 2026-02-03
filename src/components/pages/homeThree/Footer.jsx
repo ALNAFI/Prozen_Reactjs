@@ -1,13 +1,28 @@
-
+import { useState, useEffect } from "react";
 import { footerSocialLinks } from "../../../data/footerData";
 import { footerMenu } from "../../../data/HomeThreeData";
 import { Link } from "react-router-dom";
+
+const FOOTER_BG = "images/footer/bg-3.jpg";
+
 export default function Footer() {
+  const [bgStyle, setBgStyle] = useState({});
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = FOOTER_BG;
+    img.onload = () => {
+      setBgStyle({
+        backgroundImage: `url(${FOOTER_BG})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      });
+    };
+  }, []);
+
   return (
-    <footer
-      className="ht-footer-areas fix"
-      data-bg-src="images/footer/bg-3.jpg"
-    >
+    <footer className="ht-footer-areas fix" style={bgStyle}>
       <div className="container">
         <div className="ht-footer-three section-padding">
           <div className="shape float-bob-y">

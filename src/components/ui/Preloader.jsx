@@ -4,11 +4,18 @@ export default function Preloader() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 1500);
+    const hasVisited = localStorage.getItem("hasVisited");
 
-    return () => clearTimeout(timer);
+    if (!hasVisited) {
+      const timer = setTimeout(() => {
+        setLoading(false);
+        localStorage.setItem("hasVisited", "true"); 
+      }, 1500);
+
+      return () => clearTimeout(timer);
+    } else {
+      setLoading(false);
+    }
   }, []);
 
   if (!loading) return null;
@@ -19,4 +26,3 @@ export default function Preloader() {
     </div>
   );
 }
-

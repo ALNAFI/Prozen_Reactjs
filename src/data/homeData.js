@@ -1,3 +1,47 @@
+export const HERO_DATA = {
+  backgroundImage: "images/hero/hero-bg.jpg",
+  heroImage: {
+    src: "images/hero/1.png",
+    alt: "Hero illustration",
+  },
+  shape: {
+    src: "images/shape/1.svg",
+    alt: "Decorative shape",
+  },
+  content: {
+    title: {
+      main: "Innovative",
+      highlight: "business",
+      rest: ["solutions", "for everyone"],
+    },
+    description:
+      "Our team prioritizes usability and accessibility to ensure that every visitor enjoys a seamless intuitive.",
+    descriptionParts: [
+      "Our team prioritizes usability and accessibility to ensure",
+      "that every visitor enjoys a seamless intuitive.",
+    ],
+    cta: {
+      text: "Let's Get in Touch",
+      link: "/contact",
+    },
+  },
+  counters: [
+    {
+      id: 1,
+      value: 98,
+      suffix: "%",
+      label: "Return on investment",
+      animationClass: "float-bob-x",
+    },
+    {
+      id: 2,
+      value: 22.5,
+      suffix: "K",
+      label: "Happy clients worldwide",
+      animationClass: "float-bob-y",
+    },
+  ],
+};
 
 // data/servicesData.js
 export const servicesData = [
@@ -55,6 +99,34 @@ export const projectData = [
   },
   {
     id: 4,
+    image: "images/project/4.jpg",
+    title: "Digital Transformation Readiness",
+    category: "Digital marketing",
+    link: "/projectdetails",
+  },
+  {
+    id: 5,
+    image: "images/project/1.jpg",
+    title: "Digital Transformation Readiness",
+    category: "Digital marketing",
+    link: "/projectdetails",
+  },
+  {
+    id: 6,
+    image: "images/project/2.jpg",
+    title: "Digital Transformation Readiness",
+    category: "Digital marketing",
+    link: "/projectdetails",
+  },
+  {
+    id: 7,
+    image: "images/project/3.jpg",
+    title: "Digital Transformation Readiness",
+    category: "Digital marketing",
+    link: "/projectdetails",
+  },
+  {
+    id: 8,
     image: "images/project/4.jpg",
     title: "Digital Transformation Readiness",
     category: "Digital marketing",
