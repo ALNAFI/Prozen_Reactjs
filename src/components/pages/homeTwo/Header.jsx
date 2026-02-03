@@ -1,11 +1,13 @@
 import { Link } from "react-router-dom";
 import { headerMenuData } from "../../../data/headerMenuData";
 import { useStickyHeader } from "../../../hooks/useStickyHeader";
+import { useOffcanvas } from "../../../contexts/OffcanvasContext";
 
 const STICKY_SCROLL_THRESHOLD = 250;
 
 export default function Header({ onSearchClick }) {
   const isSticky = useStickyHeader(STICKY_SCROLL_THRESHOLD);
+  const { openOffcanvas } = useOffcanvas();
 
   return (
     <header className="ht-header-area">
@@ -78,7 +80,12 @@ export default function Header({ onSearchClick }) {
               </Link>
 
               {/* Mobile button */}
-              <button className="ht-menu-btn d-lg-none offcanvas-toggle">
+              <button
+                type="button"
+                className="ht-menu-btn d-lg-none offcanvas-toggle"
+                onClick={openOffcanvas}
+                aria-label="Open menu"
+              >
                 <i className="fa-solid fa-bars-staggered"></i>
               </button>
             </div>

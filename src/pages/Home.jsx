@@ -1,6 +1,5 @@
 import Footer from "../components/common/Footer";
 import Header from "../components/common/Header";
-import Offcanvas from "../components/common/Offcanvas";
 import RecentPosts from "../components/pages/home/RecentPosts";
 import Preloader from "../components/ui/Preloader";
 import TeamArea from "../components/pages/aboutUs/TeamArea";
@@ -16,8 +15,7 @@ export default function Home() {
   return (
     <>
       <Preloader />
-      <Header />
-      <Offcanvas />
+      <Header />      
       <HeroArea />
       <ServicesArea />
       <AboutArea image="/images/about/1.jpg" />

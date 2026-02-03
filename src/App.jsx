@@ -1,4 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { OffcanvasProvider } from "./contexts/OffcanvasContext";
+import Offcanvas from "./components/common/Offcanvas";
 import Home from "./pages/Home";
 import HomeTwo from "./pages/HomeTwo";
 import HomeThree from "./pages/HomeThree";
@@ -19,10 +21,12 @@ import NotFoundPage from "./pages/NotFoundPage";
 import BackToTop from "./components/ui/BackToTob";
 import Cursor from "./components/ui/Cursor";
 import ScrollToTop from "./components/ui/ScrollToTop";
+
 export default function App() {
   return (
     <BrowserRouter>
-      <Routes>
+      <OffcanvasProvider>
+        <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/hometwo" element={<HomeTwo />} />
         <Route path="/homethree" element={<HomeThree />} />
@@ -41,10 +45,12 @@ export default function App() {
         <Route path="/teamdetails" element={<TeamDetails />} />
         <Route path="/notfoundpage" element={<NotFoundPage />} />
         <Route path="*" element={<NotFoundPage />} />
-      </Routes>
-      <ScrollToTop />
-      <BackToTop />
-      <Cursor />
+        </Routes>
+        <Offcanvas />
+        <ScrollToTop />
+        <BackToTop />
+        <Cursor />
+      </OffcanvasProvider>
     </BrowserRouter>
   );
 }

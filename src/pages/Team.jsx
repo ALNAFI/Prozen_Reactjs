@@ -1,5 +1,4 @@
 import Header from "../components/common/Header";
-import Offcanvas from "../components/common/Offcanvas";
 import Breadcrumb from "../components/common/Breadcrumb";
 import TeamArea from "../components/pages/TeamAndDetails/TeamArea";
 import Footer from "../components/common/Footer";
@@ -7,7 +6,6 @@ export default function Team() {
   return (
     <>
       <Header />
-      <Offcanvas />
       <Breadcrumb title="Our Team" />
       <TeamArea />
       <Footer />

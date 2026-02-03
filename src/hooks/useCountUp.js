@@ -35,7 +35,7 @@ export const useCountUp = (endValue, duration = 4000, startDelay = 0) => {
     if (!isVisible) return;
 
     const startAnimation = () => {
-      setCount(0); // Start from 0
+      setCount(0);
       startTimeRef.current = performance.now() + startDelay;
 
       const animate = (currentTime) => {
@@ -55,7 +55,7 @@ export const useCountUp = (endValue, duration = 4000, startDelay = 0) => {
         if (progress < 1) {
           animationFrameRef.current = requestAnimationFrame(animate);
         } else {
-          setCount(endValue); // Ensure we set the final value
+          setCount(endValue);
         }
       };
 

@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Offcanvas from "../components/common/Offcanvas";
 import Search from "../components/ui/Search";
 import Header from "../components/pages/homeThree/Hearder";
 import Footer from "../components/pages/homeThree/Footer";
@@ -20,8 +19,7 @@ export default function HomeThree() {
     <>
     <Preloader />
       <Header onSearchClick={() => setSearchOpen(true)} />
-      <Search isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
-      <Offcanvas />
+      <Search isOpen={searchOpen} onClose={() => setSearchOpen(false)} />      
       <HeroArea />
       <ServicesArea />
       <AboutArea image="/images/about/3.jpg" />

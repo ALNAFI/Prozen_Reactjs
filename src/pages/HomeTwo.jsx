@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Footer from "../components/pages/homeTwo/Footer";
 import Testimonial from "../components/pages/faq/Testimonials";
-import Offcanvas from "../components/common/Offcanvas";
 import { recentPostsPage2Data } from "../data/homeTwoData";
 import RecentPosts from "../components/pages/home/RecentPosts";
 import ChooseArea from "../components/pages/aboutUs/ChooseArea";
@@ -23,7 +22,6 @@ export default function HomeTwo() {
     <Preloader />
       <Header onSearchClick={() => setSearchOpen(true)} />
       <Search isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
-      <Offcanvas />
       <HeroArea />
       <StatsArea />
       <ServicesArea />

@@ -2,8 +2,10 @@ import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import TopHeader from "./TopHeader";
 import { headerMenuData } from "../../data/headerMenuData";
+import { useOffcanvas } from "../../contexts/OffcanvasContext";
 
 export default function Header() {
+  const { openOffcanvas } = useOffcanvas();
   const headerRef = useRef(null);
 
   useEffect(() => {
@@ -95,7 +97,12 @@ export default function Header() {
                 lets get in touch
               </Link>
 
-              <button className="ht-menu-btn d-lg-none offcanvas-toggle">
+              <button
+                type="button"
+                className="ht-menu-btn d-lg-none offcanvas-toggle"
+                onClick={openOffcanvas}
+                aria-label="Open menu"
+              >
                 <i className="fa-solid fa-bars-staggered" />
               </button>
             </div>

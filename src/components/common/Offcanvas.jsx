@@ -1,12 +1,23 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useOffcanvas } from "../../contexts/OffcanvasContext";
 import { offcanvasInfo, socialLinks } from "../../data/offcanvasData";
-
-
+import { headerMenuData } from "../../data/headerMenuData";
 
 export default function Offcanvas() {
+  const { isOpen, closeOffcanvas } = useOffcanvas();
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const toggleSubmenu = (e, index) => {
+    e.preventDefault();
+    setOpenIndex((prev) => (prev === index ? null : index));
+  };
+
   return (
     <>
-      <div className="ht-offcanvas">
+      <div
+        className={`ht-offcanvas${isOpen ? " ht-offcanvas-open" : ""}`}
+      >
         <div className="ht-offcanvas-wrapper">
           {/* Header */}
           <div className="ht-offcanvas-header mb-50">
@@ -14,14 +25,73 @@ export default function Offcanvas() {
               <img src="/images/logo/logo.svg" alt="logo" />
             </Link>
 
-            <button className="ht-offcanvas-toggle-close">
+            <button
+              type="button"
+              className="ht-offcanvas-toggle-close"
+              onClick={closeOffcanvas}
+              aria-label="Close menu"
+            >
               <i className="fas fa-times" />
             </button>
           </div>
 
           {/* Mobile Menu */}
           <div className="ht-offcanvas-menu d-xl-none mb-50">
-            <nav>{/* menu will render here */}</nav>
+            <nav>
+              <ul>
+                {headerMenuData.map((item, i) => {
+                  const hasChildren = item.children && item.children.length > 0;
+                  const isSubOpen = openIndex === i;
+
+                  return (
+                    <li
+                      key={i}
+                      className={hasChildren ? `has-dropdown${isSubOpen ? " active" : ""}` : ""}
+                    >
+                      {hasChildren ? (
+                        <>
+                          <Link
+                            to={item.to || "#"}
+                            onClick={(e) => toggleSubmenu(e, i)}
+                          >
+                            {item.label}
+                          </Link>
+                          <button
+                            type="button"
+                            className="ht-menu-close"
+                            onClick={(e) => toggleSubmenu(e, i)}
+                            aria-label={isSubOpen ? "Close submenu" : "Open submenu"}
+                          >
+                            <i className="fas fa-chevron-right" />
+                          </button>
+                          <ul
+                            className="sub-menu"
+                            style={{
+                              display: "block",
+                              maxHeight: isSubOpen ? "500px" : 0,
+                              overflow: "hidden",
+                              transition: "max-height 0.6s ease-in-out",
+                            }}
+                          >
+                            {item.children.map((sub, j) => (
+                              <li key={j}>
+                                <Link to={sub.to} onClick={closeOffcanvas}>
+                                  {sub.label}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </>
+                      ) : (
+                        <Link to={item.to || "#"} onClick={closeOffcanvas}>
+                          {item.label}
+                        </Link>
+                      )}
+                    </li>
+                  );
+                })}
+              </ul>
+            </nav>
           </div>
 
           {/* Content */}
@@ -56,8 +126,15 @@ export default function Offcanvas() {
         </div>
       </div>
 
-      {/* overlay */}
-      <div className="ht-offcanvas-overlay" />
+      {/* Overlay */}
+      <div
+        className={`ht-offcanvas-overlay${isOpen ? " ht-offcanvas-overlay-open" : ""}`}
+        onClick={closeOffcanvas}
+        onKeyDown={(e) => e.key === "Enter" && closeOffcanvas()}
+        role="button"
+        tabIndex={0}
+        aria-label="Close menu"
+      />
     </>
   );
 }
