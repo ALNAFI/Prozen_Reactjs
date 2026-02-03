@@ -4,7 +4,7 @@ import { useStickyHeader } from "../../../hooks/useStickyHeader";
 
 const STICKY_SCROLL_THRESHOLD = 250;
 
-export default function Header() {
+export default function Header({ onSearchClick }) {
   const isSticky = useStickyHeader(STICKY_SCROLL_THRESHOLD);
 
   return (
@@ -48,7 +48,13 @@ export default function Header() {
                 </nav>
               </div>
 
-              <div className="search d-none d-lg-block search-toggle">
+              <div
+                className="search d-none d-lg-block search-toggle"
+                onClick={onSearchClick}
+                onKeyDown={(e) => e.key === "Enter" && onSearchClick?.()}
+                role="button"
+                tabIndex={0}
+              >
                 <i className="fa-solid fa-magnifying-glass"></i>
               </div>
 

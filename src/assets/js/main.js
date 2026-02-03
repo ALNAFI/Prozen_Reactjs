@@ -16,31 +16,6 @@
       $('.ht-offcanvas-overlay').removeClass('ht-offcanvas-overlay-open');
     });
 
-    // ===================== Search Bar Toggle =====================
-    var $searchBar = $('.ht-header-search-bar');
-
-    // Open search bar
-    $('.search-toggle').on('click', function () {
-      $searchBar.addClass('open');
-      $('.ht-offcanvas-overlay').addClass('active');
-    });
-
-    // Close via close button or overlay
-    $('.ht-search-close, .ht-offcanvas-overlay').on('click', function () {
-      $searchBar.removeClass('open');
-      $('.ht-offcanvas-overlay').removeClass('active');
-    });
-
-    // Close when clicking outside the search bar
-    $(document).on('click', function (e) {
-      if ($searchBar.hasClass('open')) {
-        if (!$(e.target).closest('.ht-header-search-bar, .search-toggle').length) {
-          $searchBar.removeClass('open');
-          $('.ht-offcanvas-overlay').removeClass('active');
-        }
-      }
-    });
-
     // ===================== Clone Main Menu to Offcanvas =====================
     var htMenuWrap = $('.ht-mobile-menu-active > ul').clone();
     var htSideMenu = $('.ht-offcanvas-menu nav');
@@ -93,11 +68,6 @@
       callbacks: {},
     });
 
-    //>> Counterup Start <<//
-    $('.count').counterUp({
-      delay: 15,
-      time: 4000,
-    });
 
     //>> Wow Animation Start <<//
     new WOW().init();

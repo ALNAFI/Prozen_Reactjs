@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Offcanvas from "../components/common/Offcanvas";
 import Search from "../components/ui/Search";
 import Header from "../components/pages/homeThree/Hearder";
@@ -11,12 +12,15 @@ import ServicesArea from "../components/pages/homeThree/ServicesArea";
 import AboutArea from "../components/pages/aboutUs/AboutArea";
 import ProcessArea from "../components/pages/homeThree/ProcessArea";
 import Preloader from "../components/ui/Preloader";
+
 export default function HomeThree() {
+  const [searchOpen, setSearchOpen] = useState(false);
+
   return (
     <>
     <Preloader />
-      <Header />
-      <Search />
+      <Header onSearchClick={() => setSearchOpen(true)} />
+      <Search isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
       <Offcanvas />
       <HeroArea />
       <ServicesArea />

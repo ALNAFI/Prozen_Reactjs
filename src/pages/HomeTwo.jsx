@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Footer from "../components/pages/homeTwo/Footer";
 import Testimonial from "../components/pages/faq/Testimonials";
 import Offcanvas from "../components/common/Offcanvas";
@@ -13,12 +14,15 @@ import AboutArea from "../components/pages/homeTwo/AboutArea";
 import ProjectArea from "../components/pages/homeTwo/ProjectArea";
 import TeamArea from "../components/pages/homeTwo/TeamArea";
 import Preloader from "../components/ui/Preloader";
+
 export default function HomeTwo() {
+  const [searchOpen, setSearchOpen] = useState(false);
+
   return (
     <>
     <Preloader />
-      <Header />
-      <Search />
+      <Header onSearchClick={() => setSearchOpen(true)} />
+      <Search isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
       <Offcanvas />
       <HeroArea />
       <StatsArea />
