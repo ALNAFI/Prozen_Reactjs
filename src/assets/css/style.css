@@ -70,6 +70,11 @@
   margin-top: 16px;
 }
 
+/* FAQ Accordion override: keep collapse visible so height animation works */
+.ht-faq-area .accordion-collapse.collapse {
+  display: block; /* override Bootstrap's display:none */
+}
+
 .mt-17 {
   margin-top: 17px;
 }
