@@ -128,7 +128,6 @@ const HeroArea = () => {
       });
     };
     img.onerror = () => {
-      console.warn(`Failed to load background image: ${HERO_DATA.backgroundImage}`);
     };
   }, []);
 

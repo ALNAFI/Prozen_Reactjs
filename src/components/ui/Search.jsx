@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import PropTypes from "prop-types";
 
 export default function Search({ isOpen = false, onClose }) {
   const searchBarRef = useRef(null);
@@ -77,3 +78,8 @@ export default function Search({ isOpen = false, onClose }) {
     </>
   );
 }
+
+Search.propTypes = {
+  isOpen: PropTypes.bool,
+  onClose: PropTypes.func,
+};

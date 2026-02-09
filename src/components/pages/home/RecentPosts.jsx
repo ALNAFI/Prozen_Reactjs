@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 export default function RecentPosts({
   data,
@@ -74,3 +75,28 @@ export default function RecentPosts({
     </section>
   );
 }
+
+RecentPosts.propTypes = {
+  data: PropTypes.shape({
+    section: PropTypes.shape({
+      subtitle: PropTypes.string,
+      title: PropTypes.string,
+      title1: PropTypes.string,
+      title2: PropTypes.string,
+    }).isRequired,
+    posts: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
+        image: PropTypes.string.isRequired,
+        date: PropTypes.string,
+        category: PropTypes.string,
+        title: PropTypes.string.isRequired,
+        link: PropTypes.string.isRequired,
+        delay: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+      })
+    ).isRequired,
+  }).isRequired,
+  variant: PropTypes.oneOf(["v1", "v2"]),
+  sectionClassName: PropTypes.string,
+  pad: PropTypes.string,
+};

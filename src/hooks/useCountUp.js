@@ -10,27 +10,25 @@ export const useCountUp = (endValue, duration = 4000, startDelay = 0) => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting && !isVisible) {
+        if (entry.isIntersecting) {
           setIsVisible(true);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
-    if (countRef.current) {
-      observer.observe(countRef.current);
+    const element = countRef.current;
+    if (element) {
+      observer.observe(element);
     }
 
     return () => {
-      if (countRef.current) {
-        observer.unobserve(countRef.current);
+      if (element) {
+        observer.unobserve(element);
       }
-      if (animationFrameRef.current) {
-        cancelAnimationFrame(animationFrameRef.current);
-      }
+      observer.disconnect();
     };
-  }, [isVisible]);
-
+  }, []);
   useEffect(() => {
     if (!isVisible) return;
 
@@ -49,7 +47,6 @@ export const useCountUp = (endValue, duration = 4000, startDelay = 0) => {
         const easeOutQuart = 1 - Math.pow(1 - progress, 4);
         const currentCount = endValue * easeOutQuart;
 
-        // Use Math.max(0, currentCount) to ensure the count doesn't go negative
         setCount(Math.max(0, currentCount));
 
         if (progress < 1) {

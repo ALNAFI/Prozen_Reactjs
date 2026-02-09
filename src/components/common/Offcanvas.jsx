@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { Link } from "react-router-dom";
 import { useOffcanvas } from "../../contexts/OffcanvasContext";
 import { offcanvasInfo, socialLinks } from "../../data/offcanvasData";
@@ -8,10 +8,10 @@ export default function Offcanvas() {
   const { isOpen, closeOffcanvas } = useOffcanvas();
   const [openIndex, setOpenIndex] = useState(null);
 
-  const toggleSubmenu = (e, index) => {
+  const toggleSubmenu = useCallback((e, index) => {
     e.preventDefault();
     setOpenIndex((prev) => (prev === index ? null : index));
-  };
+  }, []);
 
   return (
     <>

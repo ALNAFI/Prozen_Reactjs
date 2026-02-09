@@ -7,7 +7,7 @@ import { LenisProvider } from "./contexts/LenisContext";
 
 // ================= Global UI =================
 import Offcanvas from "./components/common/Offcanvas";
-import BackToTop from "./components/ui/BackToTob";
+import BackToTop from "./components/ui/BackToTop";
 import Cursor from "./components/ui/Cursor";
 import ScrollToTop from "./components/ui/ScrollToTop";
 import AOSInit from "./components/ui/AOSInit";

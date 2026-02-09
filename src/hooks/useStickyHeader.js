@@ -8,8 +8,9 @@ export const useStickyHeader = (threshold = 250) => {
     };
 
     handleScroll();
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    const options = { passive: true };
+    window.addEventListener("scroll", handleScroll, options);
+    return () => window.removeEventListener("scroll", handleScroll, options);
   }, [threshold]);
 
   return isSticky;

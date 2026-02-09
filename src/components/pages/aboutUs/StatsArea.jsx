@@ -1,4 +1,5 @@
 import { memo } from "react";
+import PropTypes from "prop-types";
 import { useCountUp } from "../../../hooks/useCountUp";
 import { statsData } from "../../../data/aboutUsData";
 
@@ -21,7 +22,7 @@ const StatItem = memo(({ stat }) => {
 
 StatItem.displayName = "StatItem";
 
-export default function StatsArea({pad=""}) {
+export default function StatsArea({ pad = "" }) {
   return (
     <section className={`ht-stats-area section-padding fix ${pad}`}>
       <div className="container">
@@ -38,3 +39,7 @@ export default function StatsArea({pad=""}) {
     </section>
   );
 }
+
+StatsArea.propTypes = {
+  pad: PropTypes.string,
+};
