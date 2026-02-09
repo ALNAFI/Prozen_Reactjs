@@ -29,7 +29,7 @@ export default function TeamArea() {
               >
                 <div className="ht-team-items">
                   <div className="ht-team-thumb">
-                    <Link to="/team-details">
+                    <Link to="/teamdetails">
                       <img src={member.image} alt={member.name} />
                     </Link>
 
@@ -43,7 +43,7 @@ export default function TeamArea() {
                   </div>
 
                   <div className="ht-team-content">
-                    <Link to="/team-details">
+                    <Link to="/teamdetails">
                       <h4 className="name">{member.name}</h4>
                     </Link>
                     <p className="role">{member.role}</p>

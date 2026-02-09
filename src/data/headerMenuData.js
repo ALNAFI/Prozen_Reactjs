@@ -1,7 +1,6 @@
 export const headerMenuData = [
   {
     label: "Home",
-    to: "/",
     children: [
       { label: "Main Home", to: "/" },
       { label: "Corporate Business", to: "/hometwo" },
