@@ -19,7 +19,7 @@ export default function Footer() {
           <div className="row gy-5">
             {/* Left */}
             <div className="col-xl-4">
-              <div className="ht-footer-info wow fadeInUp" data-wow-delay=".3s">
+              <div className="ht-footer-info" data-aos="fade-up" data-aos-delay="300">
                 <Link to="/">
                   <img src="images/logo/logo-white-2.svg" alt="logo" />
                 </Link>
@@ -46,7 +46,7 @@ export default function Footer() {
             <div className="offset-xl-1 col-xl-7">
               <div className="ht-footer-widgets">
                 {/* Quick Links */}
-                <div className="widget-item wow fadeInUp" data-wow-delay=".6s">
+                <div className="widget-item" data-aos="fade-up" data-aos-delay="600">
                   <h5 className="head">Quick Links</h5>
                   <ul className="link-list">
                     {footerQuickLinks.map((link) => (
@@ -58,7 +58,7 @@ export default function Footer() {
                 </div>
 
                 {/* Services */}
-                <div className="widget-item wow fadeInUp" data-wow-delay=".9s">
+                <div className="widget-item" data-aos="fade-up" data-aos-delay="900">
                   <h5 className="head">Our Services</h5>
                   <ul className="link-list">
                     {footerServiceLinks.map((link) => (
@@ -71,8 +71,9 @@ export default function Footer() {
 
                 {/* Subscribe */}
                 <div
-                  className="widget-subscriber wow fadeInUp"
-                  data-wow-delay="1.2s"
+                  className="widget-subscriber"
+                  data-aos="fade-up"
+                  data-aos-delay="1200"
                 >
                   <form onSubmit={handleSubmit}>
                     <h5>Subscribe for updates and exclusive offers!</h5>
@@ -119,8 +120,9 @@ export default function Footer() {
 
         {/* Copyright */}
         <div
-          className="ht-footer-copyright ht-footer-copyright-2 wow fadeInUp"
-          data-wow-delay="1.5s"
+          className="ht-footer-copyright ht-footer-copyright-2"
+          data-aos="fade-up"
+          data-aos-delay="1500"
         >
           <p>
             ©{getCurrentYear()} <span>Hurraytheme</span>. All rights reserved.

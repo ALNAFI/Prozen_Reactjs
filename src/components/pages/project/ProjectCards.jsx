@@ -9,8 +9,9 @@ export default function ProjectCards() {
             {projectData.map((project) => (
               <div
                 key={project.id}
-                className="col-lg-4 wow fadeInUp"
-                data-wow-delay={project.delay}
+                className="col-lg-4"
+                data-aos="fade-up"
+                data-aos-delay={project.delay}
               >
                 <div className="single-item v2">
                   <div className="thumb">

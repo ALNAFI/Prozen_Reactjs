@@ -22,14 +22,14 @@ import BackToTop from "./components/ui/BackToTob";
 import Cursor from "./components/ui/Cursor";
 import ScrollToTop from "./components/ui/ScrollToTop";
 import { LenisProvider } from "./contexts/LenisContext";
-import WowInit from "./components/ui/WowInit";
+import AOSInit from "./components/ui/AOSInit";
 
 export default function App() {
   return (
     <LenisProvider>
     <BrowserRouter>
       <OffcanvasProvider>
-        <WowInit />
+        <AOSInit />
         <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/hometwo" element={<HomeTwo />} />

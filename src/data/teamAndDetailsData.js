@@ -4,7 +4,7 @@ export const teamData = [
     name: "Linda F. Collins",
     role: "SR Marketer",
     image: "/images/team/1.jpg",
-    delay: ".2s",
+    delay: 200,
     socials: ["x-twitter", "instagram"],
   },
   {
@@ -12,7 +12,7 @@ export const teamData = [
     name: "Sandra D. Rainey",
     role: "Executive officer",
     image: "/images/team/2.jpg",
-    delay: ".4s",
+    delay: 400,
     socials: ["x-twitter", "instagram"],
   },
   {
@@ -20,7 +20,7 @@ export const teamData = [
     name: "Brooklyn Simmons",
     role: "CEO & Founder",
     image: "/images/team/3.jpg",
-    delay: ".6s",
+    delay: 600,
     socials: ["x-twitter", "instagram"],
   },
   {
@@ -28,7 +28,7 @@ export const teamData = [
     name: "Patrick Stewart",
     role: "Finance advisor",
     image: "/images/team/4.jpg",
-    delay: ".8s",
+    delay: 800,
     socials: ["x-twitter", "instagram"],
   },
   {
@@ -36,7 +36,7 @@ export const teamData = [
     name: "Daniyel Karlos",
     role: "SR Marketer",
     image: "/images/team/9.jpg",
-    delay: "1s",
+    delay: 1000,
     socials: ["x-twitter", "instagram"],
   },
   {
@@ -44,7 +44,7 @@ export const teamData = [
     name: "Ryan Williams",
     role: "Executive officer",
     image: "/images/team/10.jpg",
-    delay: "1.2s",
+    delay: 1200,
     socials: ["x-twitter", "instagram"],
   },
   {
@@ -52,7 +52,7 @@ export const teamData = [
     name: "Steven A. Urenda",
     role: "CEO & Founder",
     image: "/images/team/11.jpg",
-    delay: "1.4s",
+    delay: 1400,
     socials: ["x-twitter", "instagram"],
   },
   {
@@ -60,7 +60,7 @@ export const teamData = [
     name: "Karla Hesterberg",
     role: "Finance advisor",
     image: "/images/team/12.jpg",
-    delay: "1.6s",
+    delay: 1600,
     socials: ["x-twitter", "instagram"],
   },
 ];
@@ -114,7 +114,7 @@ export const servicesData = [
     arrowClass: "one",
     description:
       "Our team prioritizes usability and accessibility to ensure that every visitor enjoys a seamless intuitive.",
-    delay: ".2s",
+    delay: 200,
   },
   {
     id: 2,
@@ -123,7 +123,7 @@ export const servicesData = [
     arrowClass: "two",
     description:
       "Our team prioritizes usability and accessibility to ensure that every visitor enjoys a seamless intuitive.",
-    delay: ".4s",
+    delay: 400,
   },
   {
     id: 3,
@@ -132,7 +132,7 @@ export const servicesData = [
     arrowClass: "three",
     description:
       "Our team prioritizes usability and accessibility to ensure that every visitor enjoys a seamless intuitive.",
-    delay: ".6s",
+    delay: 600,
   },
   {
     id: 4,
@@ -141,7 +141,7 @@ export const servicesData = [
     arrowClass: "four",
     description:
       "Our team prioritizes usability and accessibility to ensure that every visitor enjoys a seamless intuitive.",
-    delay: ".8s",
+    delay: 800,
   },
   {
     id: 5,
@@ -150,7 +150,7 @@ export const servicesData = [
     arrowClass: "three",
     description:
       "Our team prioritizes usability and accessibility to ensure that every visitor enjoys a seamless intuitive.",
-    delay: "1s",
+    delay: 1000,
   },
   {
     id: 6,
@@ -159,6 +159,6 @@ export const servicesData = [
     arrowClass: "four",
     description:
       "Our team prioritizes usability and accessibility to ensure that every visitor enjoys a seamless intuitive.",
-    delay: "1.2s",
+    delay: 1200,
   },
 ];

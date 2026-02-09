@@ -8,10 +8,10 @@ export default function ProcessArea() {
       <div className="container">
         {/* Section title */}
         <div className="section-title text-center">
-          <span className="subtitle wow fadeInUp" data-wow-delay=".2s">
+          <span className="subtitle" data-aos="fade-up" data-aos-delay="200">
             {section.subtitle}
           </span>
-          <h2 className="title wow fadeInUp" data-wow-delay=".5s">
+          <h2 className="title" data-aos="fade-up" data-aos-delay="500">
             {section.title1} <br /> {section.title2}
           </h2>
         </div>
@@ -22,8 +22,9 @@ export default function ProcessArea() {
             {items.map((item) => (
               <div
                 key={item.id}
-                className="col-xl-3 col-lg-4 col-md-6 wow fadeInUp"
-                data-wow-delay={item.delay}
+                className="col-xl-3 col-lg-4 col-md-6"
+                data-aos="fade-up"
+                data-aos-delay={item.delay}
               >
                 <div className="process-item">
                   <div className="thumb">

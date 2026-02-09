@@ -13,20 +13,21 @@ export default function PricingArea({pad=""}) {
             <div className="col-lg-6">
               <div className="ht-price-content">
                 <div className="section-title">
-                  <span className="subtitle wow fadeInUp" data-wow-delay=".2s">
+                  <span className="subtitle" data-aos="fade-up" data-aos-delay="200">
                     {section.subtitle}
                   </span>
-                  <h2 className="title wow fadeInUp" data-wow-delay=".4s">
+                  <h2 className="title" data-aos="fade-up" data-aos-delay="400">
                     {section.title}
                   </h2>
-                  <p className="wow fadeInUp" data-wow-delay=".6s">
+                  <p data-aos="fade-up" data-aos-delay="600">
                     {section.description}
                   </p>
                 </div>
                 <Link
                   to={section.button.link}
-                  className="ht-btn style-2 wow fadeInUp"
-                  data-wow-delay=".8s"
+                  className="ht-btn style-2"
+                  data-aos="fade-up"
+                  data-aos-delay="800"
                 >
                   {section.button.label}
                 </Link>
@@ -38,8 +39,9 @@ export default function PricingArea({pad=""}) {
                 {plans.map((plan) => (
                   <div
                     key={plan.id}
-                    className={`single-item ${plan.style} wow fadeInUp`}
-                    data-wow-delay={plan.delay}
+                    className={`single-item ${plan.style}`}
+                    data-aos="fade-up"
+                    data-aos-delay={plan.delay}
                   >
                     <div className="left">
                       <span>{plan.name}</span>

@@ -12,22 +12,33 @@ export default function ChooseArea() {
             <div className="col-xl-7 col-lg-6">
               <div className="ht-choose-left">
                 <div className="content">
-                  <h2 className="wow fadeInUp" data-wow-delay=".2s">
+                  <h2
+                    data-aos="fade-up"
+                    data-aos-delay="200"
+                  >
                     {left.title}
                   </h2>
-                  <p className="wow fadeInUp" data-wow-delay=".4s">
+                  <p
+                    data-aos="fade-up"
+                    data-aos-delay="400"
+                  >
                     {left.description}
                   </p>
                   <Link
                     to={left.button.link}
-                    className="ht-btn style-4 wow fadeInUp"
-                    data-wow-delay=".6s"
+                    className="ht-btn style-4"
+                    data-aos="fade-up"
+                    data-aos-delay="600"
                   >
                     {left.button.label}
                   </Link>
                 </div>
 
-                <div className="thumb wow fadeInUp" data-wow-delay=".8s">
+                <div
+                  className="thumb"
+                  data-aos="fade-up"
+                  data-aos-delay="800"
+                >
                   <img src={left.image} alt="choose" />
                 </div>
               </div>
@@ -39,8 +50,9 @@ export default function ChooseArea() {
                 {benefits.map((item) => (
                   <div
                     key={item.id}
-                    className="single-item wow fadeInUp"
-                    data-wow-delay={item.delay}
+                    className="single-item"
+                    data-aos="fade-up"
+                    data-aos-delay={parseFloat(item.delay) * 1000}
                   >
                     <div className="icon">
                       <img src={item.icon} alt={item.title} />

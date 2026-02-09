@@ -10,8 +10,9 @@ export default function BlogArea() {
             {blogData.map((blog) => (
               <div
                 key={blog.id}
-                className="col-lg-4 col-md-6 col-sm-12 wow fadeInUp"
-                data-wow-delay={blog.delay}
+                className="col-lg-4 col-md-6 col-sm-12"
+                data-aos="fade-up"
+                data-aos-delay={blog.delay}
               >
                 <div className="ht-blog-item v2 mt-20">
                   <div className="ht-blog-thumb">

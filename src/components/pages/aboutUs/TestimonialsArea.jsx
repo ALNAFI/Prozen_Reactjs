@@ -27,7 +27,11 @@ export default function TestimonialsArea() {
             {/* Left */}
             <div className="col-lg-5">
               <div className="section-title">
-                <span className="subtitle wow fadeInUp" data-wow-delay=".2s">
+                <span
+                  className="subtitle"
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                >
                   {section.subtitle}
                 </span>
 

@@ -20,15 +20,17 @@ export default function ProcessArea({
         {/* Section title */}
         <div className="section-title text-center">
           <span
-            className={`subtitle wow fadeInUp ${subtitleColor}`}
-            data-wow-delay=".2s"
+            className={`subtitle ${subtitleColor}`}
+            data-aos="fade-up"
+            data-aos-delay="200"
           >
             {subtitle}
           </span>
 
           <h2
-            className={`title wow fadeInUp ${titleColor}`}
-            data-wow-delay=".5s"
+            className={`title ${titleColor}`}
+            data-aos="fade-up"
+            data-aos-delay="500"
           >
             {title1} <br /> {title2}
           </h2>
@@ -40,8 +42,9 @@ export default function ProcessArea({
             {steps.map((item) => (
               <div
                 key={item.id}
-                className="col-lg-3 col-md-6 col-sm-12 wow fadeInUp"
-                data-wow-delay={item.delay}
+                className="col-lg-3 col-md-6 col-sm-12"
+                data-aos="fade-up"
+                data-aos-delay={parseFloat(item.delay) * 1000}
               >
                 <div className={`mt-25 ${descriptionColor}`}>
                   <span className="step">{item.step}</span>

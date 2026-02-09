@@ -9,10 +9,10 @@ export default function ServicesArea() {
       <div className="container">
         {/* Section title */}
         <div className="section-title text-center">
-          <span className="subtitle wow fadeInUp" data-wow-delay=".2s">
+          <span className="subtitle" data-aos="fade-up" data-aos-delay="200">
             {section.subtitle}
           </span>
-          <h2 className="title wow fadeInUp" data-wow-delay=".5s">
+          <h2 className="title" data-aos="fade-up" data-aos-delay="500">
             {section.title1} <br /> {section.title2}
           </h2>
         </div>
@@ -23,8 +23,9 @@ export default function ServicesArea() {
             {services.map((item) => (
               <div
                 key={item.id}
-                className="col-lg-4 col-md-6 col-sm-6 wow fadeInUp"
-                data-wow-delay={item.delay}
+                className="col-lg-4 col-md-6 col-sm-6"
+                data-aos="fade-up"
+                data-aos-delay={item.delay}
               >
                 <div className="ht-services-items mt-25">
                   <div className="icon">

@@ -13,15 +13,15 @@ export default function RecentPosts() {
             <div className="col-lg-5">
               <div className="ht-blog-contents">
                 <div className="section-title">
-                  <span className="subtitle wow fadeInUp" data-wow-delay=".2s">
+                  <span className="subtitle" data-aos="fade-up" data-aos-delay="200">
                     {section.subtitle}
                   </span>
 
-                  <h2 className="title wow fadeInUp" data-wow-delay=".5s">
+                  <h2 className="title" data-aos="fade-up" data-aos-delay="500">
                     {section.title1} <br /> {section.title2}
                   </h2>
 
-                  <p className="mt-7 wow fadeInUp" data-wow-delay=".8s">
+                  <p className="mt-7" data-aos="fade-up" data-aos-delay="800">
                     {section.desc}
                   </p>
                 </div>
@@ -38,8 +38,9 @@ export default function RecentPosts() {
                 {posts.map((post) => (
                   <div
                     key={post.id}
-                    className="single-item wow fadeInUp"
-                    data-wow-delay={post.delay}
+                    className="single-item"
+                    data-aos="fade-up"
+                    data-aos-delay={post.delay}
                   >
                     <div className="thumb">
                       <Link to={post.link}>

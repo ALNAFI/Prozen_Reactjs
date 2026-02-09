@@ -48,23 +48,24 @@ export default function HeroArea() {
       <div className="container">
         <div className="hero-wrapper">
           <div className="ht-hero-content style-3">
-            <h1 className="wow fadeInUp" data-wow-delay=".3s">
+            <h1 data-aos="fade-up" data-aos-delay="300">
               Trusted <br /> Insurance for a <br /> Peaceful Life
             </h1>
-            <p className="desc wow fadeInUp" data-wow-delay=".6s">
+            <p className="desc" data-aos="fade-up" data-aos-delay="600">
               Explore our tailored insurance solutions and experience the peace
               of mind that <br />
               comes with knowing you're with covered Potenti nullam{" "}
             </p>
             <Link
               to="/contact"
-              className="ht-btn style-2 wow fadeInUp"
-              data-wow-delay=".9s"
+              className="ht-btn style-2"
+              data-aos="fade-up"
+              data-aos-delay="900"
             >
               Let's Get in Touch
             </Link>
           </div>
-          <div className="video-card wow fadeInUp" data-wow-delay=".3s">
+          <div className="video-card" data-aos="fade-up" data-aos-delay="300">
             <Swiper
               modules={[Navigation]}
               slidesPerView={1}

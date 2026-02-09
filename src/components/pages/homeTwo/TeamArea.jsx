@@ -12,10 +12,10 @@ export default function TeamArea() {
             <div className="col-lg-4">
               <div className="ht-team-content-2">
                 <div className="section-title">
-                  <span className="subtitle wow fadeInUp" data-wow-delay=".2s">
+                  <span className="subtitle" data-aos="fade-up" data-aos-delay="200">
                     {section.subtitle}
                   </span>
-                  <h2 className="title fadeInUp" data-wow-delay=".2s">
+                  <h2 className="title" data-aos="fade-up" data-aos-delay="200">
                     {section.title}
                   </h2>
                   <p>{section.desc}</p>
@@ -23,8 +23,9 @@ export default function TeamArea() {
 
                 <Link
                   to={section.button.link}
-                  className="ht-btn fadeInUp"
-                  data-wow-delay={section.button.delay}
+                  className="ht-btn"
+                  data-aos="fade-up"
+                  data-aos-delay={section.button.delay}
                 >
                   {section.button.text}
                 </Link>
@@ -38,8 +39,9 @@ export default function TeamArea() {
                   {members.map((member) => (
                     <div
                       key={member.id}
-                      className="col-md-6 wow fadeInUp"
-                      data-wow-delay={member.delay}
+                      className="col-md-6"
+                      data-aos="fade-up"
+                      data-aos-delay={member.delay}
                     >
                       <div className="single-item">
                         <div className="thumb">

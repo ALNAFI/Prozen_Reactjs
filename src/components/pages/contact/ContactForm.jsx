@@ -8,10 +8,18 @@ export default function ContactForm() {
     <section className="ht-contact-form-area section-padding">
       <div className="container">
         <div className="section-title text-center">
-          <span className="subtitle wow fadeInUp" data-wow-delay=".2s">
+          <span
+            className="subtitle"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             Contact Us
           </span>
-          <h2 className="title wow fadeInUp text-black" data-wow-delay=".5s">
+          <h2
+            className="title text-black"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
             Have questions? <br />
             contact us!
           </h2>

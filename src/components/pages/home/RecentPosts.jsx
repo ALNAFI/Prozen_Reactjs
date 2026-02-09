@@ -13,10 +13,10 @@ export default function RecentPosts({
     <section className={sectionClassName}>
       <div className="container">
         <div className="section-title text-center">
-          <span className="subtitle wow fadeInUp" data-wow-delay=".2s">
+          <span className="subtitle" data-aos="fade-up" data-aos-delay="200">
             {section.subtitle}
           </span>
-          <h2 className="title wow fadeInUp" data-wow-delay=".4s">
+          <h2 className="title" data-aos="fade-up" data-aos-delay="400">
             {section.title1 ? (
               <>
                 {section.title1} <br /> {section.title2}
@@ -33,8 +33,9 @@ export default function RecentPosts({
             {posts.map((post) => (
               <div
                 key={post.id}
-                className="col-lg-4 col-md-6 col-sm-12 wow fadeInUp"
-                data-wow-delay={post.delay}
+                className="col-lg-4 col-md-6 col-sm-12"
+                data-aos="fade-up"
+                data-aos-delay={post.delay}
               >
                 <div className="ht-blog-item mt-20">
                   <div className="ht-blog-thumb">

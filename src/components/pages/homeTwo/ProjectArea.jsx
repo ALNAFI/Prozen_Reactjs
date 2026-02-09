@@ -10,18 +10,19 @@ export default function ProjectArea() {
         {/* Header */}
         <div className="section-title-area align-items-lg-end">
           <div className="section-title mb-0">
-            <span className="subtitle wow fadeInUp" data-wow-delay=".2s">
+            <span className="subtitle" data-aos="fade-up" data-aos-delay="200">
               {section.subtitle}
             </span>
-            <h2 className="title wow fadeInUp" data-wow-delay=".4s">
+            <h2 className="title" data-aos="fade-up" data-aos-delay="400">
               {section.title1} <br /> {section.title2}
             </h2>
           </div>
 
           <Link
             to={topButton.link}
-            className="ht-btn style-2 wow fadeInUp"
-            data-wow-delay={topButton.delay}
+            className="ht-btn style-2"
+            data-aos="fade-up"
+            data-aos-delay={topButton.delay}
           >
             {topButton.text}
           </Link>
@@ -33,8 +34,9 @@ export default function ProjectArea() {
             {projects.map((item) => (
               <div
                 key={item.id}
-                className="col-lg-6 wow fadeInUp"
-                data-wow-delay={item.delay}
+                className="col-lg-6"
+                data-aos="fade-up"
+                data-aos-delay={item.delay}
               >
                 <div className="single-item">
                   <div className="thumb">
@@ -56,8 +58,9 @@ export default function ProjectArea() {
             {/* Bottom button */}
             <Link
               to={bottomButton.link}
-              className="project-btn mx-auto wow fadeInUp"
-              data-wow-delay={bottomButton.delay}
+              className="project-btn mx-auto"
+              data-aos="fade-up"
+              data-aos-delay={bottomButton.delay}
             >
               {bottomButton.textLine1} <br />
               {bottomButton.textLine2}

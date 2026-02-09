@@ -11,7 +11,11 @@ export default function AboutArea({ image }) {
           <div className="row align-items-lg-center g-5">
             {/* Image */}
             <div className="col-lg-6 col-sm-12">
-              <div className="ht-about-img wow fadeInUp" data-wow-delay=".3s">
+              <div
+                className="ht-about-img"
+                data-aos="fade-up"
+                data-aos-delay="300"
+              >
                 <img src={image} alt="about" />
               </div>
             </div>
@@ -19,20 +23,32 @@ export default function AboutArea({ image }) {
             <div className="offset-lg-1 col-lg-5 col-sm-12">
               <div className="ht-about-content">
                 <div className="section-title">
-                  <span className="subtitle wow fadeInUp" data-wow-delay=".2s">
+                  <span
+                    className="subtitle"
+                    data-aos="fade-up"
+                    data-aos-delay="200"
+                  >
                     {subtitle}
                   </span>
-                  <h2 className="title wow fadeInUp" data-wow-delay=".5s">
+                  <h2
+                    className="title"
+                    data-aos="fade-up"
+                    data-aos-delay="500"
+                  >
                     {title}
                   </h2>
-                  <p className="wow fadeIn" data-wow-delay=".8s">
+                  <p
+                    data-aos="fade"
+                    data-aos-delay="800"
+                  >
                     {description}
                   </p>
                 </div>
                 <Link
                   to={button.link}
-                  className="ht-btn style-3 wow fadeInUp"
-                  data-wow-delay="1.1s"
+                  className="ht-btn style-3"
+                  data-aos="fade-up"
+                  data-aos-delay="1100"
                 >
                   {button.label}
                 </Link>

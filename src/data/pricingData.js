@@ -17,7 +17,7 @@ export const pricingData = {
       price: 199,
       duration: "month",
       link: "/pricing",
-      delay: ".3s",
+      delay: 300,
       style: "",
       features: [
         "Initial consultation",
@@ -34,7 +34,7 @@ export const pricingData = {
       price: 199,
       duration: "month",
       link: "/pricing",
-      delay: ".6s",
+      delay: 600,
       style: "style-2",
       features: [
         "Initial consultation",
@@ -51,7 +51,7 @@ export const pricingData = {
       price: 199,
       duration: "month",
       link: "/pricing",
-      delay: ".9s",
+      delay: 900,
       style: "",
       features: [
         "Initial consultation",

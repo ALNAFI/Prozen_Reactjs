@@ -73,7 +73,7 @@ export const recentPostsData = {
       titleLine1: "Travel insurance tips for",
       titleLine2: "safety abroad",
       link: "/blogdetails",
-      delay: ".3s",
+      delay: 300,
     },
     {
       id: 2,
@@ -83,7 +83,7 @@ export const recentPostsData = {
       titleLine1: "Back-to-school coverage",
       titleLine2: "tips for kids.",
       link: "/blogdetails",
-      delay: ".6s",
+      delay: 600,
     },
     {
       id: 3,
@@ -93,7 +93,7 @@ export const recentPostsData = {
       titleLine1: "Tips for handling a car",
       titleLine2: "accident scene.",
       link: "/blogdetails",
-      delay: ".9s",
+      delay: 900,
     },
   ],
 };
@@ -134,7 +134,7 @@ export const servicesInsuranceData = {
       desc:
         "With our innovative consulting today's breakthroughs become the leadership strategies propelling your",
       link: "/servicedetails",
-      delay: ".3s",
+      delay: 300,
     },
     {
       id: 2,
@@ -143,7 +143,7 @@ export const servicesInsuranceData = {
       desc:
         "With our innovative consulting today's breakthroughs become the leadership strategies propelling your",
       link: "/servicedetails",
-      delay: ".6s",
+      delay: 600,
     },
     {
       id: 3,
@@ -152,7 +152,7 @@ export const servicesInsuranceData = {
       desc:
         "With our innovative consulting today's breakthroughs become the leadership strategies propelling your",
       link: "/servicedetails",
-      delay: ".8s",
+      delay: 800,
     },
   ],
 };
@@ -176,7 +176,7 @@ export const processAreaData = {
       desc:
         "Credibly conceptualize multifunctional human capital after that awesome revenue superior scenarios.",
       arrow: "images/icon/6.svg",
-      delay: ".3s",
+      delay: 300,
     },
     {
       id: 2,
@@ -187,7 +187,7 @@ export const processAreaData = {
       desc:
         "Credibly conceptualize multifunctional human capital after that awesome revenue superior scenarios.",
       arrow: "images/icon/7.svg",
-      delay: ".6s",
+      delay: 600,
     },
     {
       id: 3,
@@ -196,7 +196,7 @@ export const processAreaData = {
       title: "Relax & Sleep Easy",
       desc:
         "Credibly conceptualize multifunctional human capital after that awesome revenue superior scenarios.",
-      delay: ".9s",
+      delay: 900,
     },
   ],
 };

@@ -16,15 +16,15 @@ export default function Testimonials() {
         {/* Header */}
         <div className="section-title-area align-items-lg-end mb-30">
           <div className="section-title mb-0">
-            <span className="subtitle wow fadeInUp" data-wow-delay=".2s">
+            <span className="subtitle" data-aos="fade-up" data-aos-delay="200">
               {subtitle}
             </span>
-            <h2 className="title wow fadeInUp" data-wow-delay=".4s">
+            <h2 className="title" data-aos="fade-up" data-aos-delay="400">
               {title}
             </h2>
           </div>
 
-          <div className="ht-testi-btn mt-0 wow fadeInUp" data-wow-delay=".6s">
+          <div className="ht-testi-btn mt-0" data-aos="fade-up" data-aos-delay="600">
             <button ref={prevRef} className="ht-testi-prev ht-testi-prev-2">
               <i className="fa-solid fa-chevron-left" />
             </button>

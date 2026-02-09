@@ -10,8 +10,9 @@ export default function TeamArea() {
             {teamData.map((member) => (
               <div
                 key={member.id}
-                className="col-lg-3 col-md-6 col-sm-12 wow fadeInUp"
-                data-wow-delay={member.delay}
+                className="col-lg-3 col-md-6 col-sm-12"
+                data-aos="fade-up"
+                data-aos-delay={member.delay}
               >
                 <div className="ht-team-items">
                   <div className="ht-team-thumb">

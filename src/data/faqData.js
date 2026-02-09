@@ -10,7 +10,7 @@ export const faqAreaData = {
       question: "HOW TO CHOOSE HEALTH INSURANCE?",
       answer:
         "If you ask our clients what it’s like working 36, they’ll about how much we care about their success.",
-      delay: "1.2s",
+      delay: 1200,
       open: true,
     },
     {
@@ -18,14 +18,14 @@ export const faqAreaData = {
       question: "HOW DOES LIFE INSURANCE HELP MY FAMILY?",
       answer:
         "Life insurance can provide financial security and peace of mind for your loved ones.",
-      delay: "1.5s",
+      delay: 1500,
     },
     {
       id: "faq3",
       question: "ESSENTIAL TYPES OF BUSINESS INSURANCE?",
       answer:
         "Common business insurances include general liability, property, and workers’ compensation.",
-      delay: "1.8s",
+      delay: 1800,
     },
   ],
 };

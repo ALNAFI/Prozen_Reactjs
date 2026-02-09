@@ -5,7 +5,7 @@ export const projectData = [
     category: "Digital marketing",
     image: "/images/project/9.jpg",
     link: "/project-details",
-    delay: ".2s",
+    delay: 200,
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ export const projectData = [
     category: "Digital marketing",
     image: "/images/project/10.jpg",
     link: "/project-details",
-    delay: ".4s",
+    delay: 400,
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ export const projectData = [
     category: "Digital marketing",
     image: "/images/project/11.jpg",
     link: "/project-details",
-    delay: ".6s",
+    delay: 600,
   },
   {
     id: 4,
@@ -29,7 +29,7 @@ export const projectData = [
     category: "Digital marketing",
     image: "/images/project/12.jpg",
     link: "/project-details",
-    delay: ".8s",
+    delay: 800,
   },
   {
     id: 5,
@@ -37,7 +37,7 @@ export const projectData = [
     category: "Digital marketing",
     image: "/images/project/13.jpg",
     link: "/project-details",
-    delay: "1s",
+    delay: 1000,
   },
   {
     id: 6,
@@ -45,6 +45,6 @@ export const projectData = [
     category: "Digital marketing",
     image: "/images/project/14.jpg",
     link: "/project-details",
-    delay: "1.2s",
+    delay: 1200,
   },
 ];

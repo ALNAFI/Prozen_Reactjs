@@ -25,17 +25,18 @@ export default function ProjectArea() {
         {/* Header */}
         <div className="section-title-area align-items-lg-end mb-25">
           <div className="section-title">
-            <span className="subtitle wow fadeInUp" data-wow-delay=".2s">
+            <span className="subtitle" data-aos="fade-up" data-aos-delay="200">
               Selected Works
             </span>
-            <h2 className="title wow fadeInUp" data-wow-delay=".4s">
+            <h2 className="title" data-aos="fade-up" data-aos-delay="400">
               Our complete <br /> project list
             </h2>
           </div>
 
           <div
-            className="ht-project-btn mb-25 wow fadeInUp"
-            data-wow-delay=".6s"
+            className="ht-project-btn mb-25"
+            data-aos="fade-up"
+            data-aos-delay="600"
           >
             <button 
               ref={prevRef} 

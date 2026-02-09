@@ -16,7 +16,7 @@ export const servicesAreaData = [
     arrowClass: "one",
     description:
       "Our team prioritizes usability and accessibility to ensure that every visitor enjoys a seamless intuitive.",
-    delay: ".2s",
+    delay: 200,
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ export const servicesAreaData = [
     arrowClass: "two",
     description:
       "Our team prioritizes usability and accessibility to ensure that every visitor enjoys a seamless intuitive.",
-    delay: ".4s",
+    delay: 400,
   },
   {
     id: 3,
@@ -34,7 +34,7 @@ export const servicesAreaData = [
     arrowClass: "three",
     description:
       "Our team prioritizes usability and accessibility to ensure that every visitor enjoys a seamless intuitive.",
-    delay: ".6s",
+    delay: 600,
   },
   {
     id: 4,
@@ -43,7 +43,7 @@ export const servicesAreaData = [
     arrowClass: "four",
     description:
       "Our team prioritizes usability and accessibility to ensure that every visitor enjoys a seamless intuitive.",
-    delay: ".8s",
+    delay: 800,
   },
   {
     id: 5,
@@ -52,7 +52,7 @@ export const servicesAreaData = [
     arrowClass: "three",
     description:
       "Our team prioritizes usability and accessibility to ensure that every visitor enjoys a seamless intuitive.",
-    delay: "1s",
+    delay: 1000,
   },
   {
     id: 6,
@@ -61,6 +61,6 @@ export const servicesAreaData = [
     arrowClass: "four",
     description:
       "Our team prioritizes usability and accessibility to ensure that every visitor enjoys a seamless intuitive.",
-    delay: "1.2s",
+    delay: 1200,
   },
 ];

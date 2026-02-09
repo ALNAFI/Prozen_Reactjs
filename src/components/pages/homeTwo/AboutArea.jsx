@@ -28,8 +28,9 @@ const StatItem = memo(({ item }) => {
 
   return (
     <div
-      className="review-item wow fadeInUp"
-      data-wow-delay={item.delay}
+      className="review-item"
+      data-aos="fade-up"
+      data-aos-delay={item.delay}
       ref={countRef}
     >
       <h2>
@@ -54,8 +55,9 @@ export default function AboutArea() {
             {/* Left image */}
             <div className="col-lg-6 col-sm-12">
               <div
-                className="ht-about-img ht-about-img-2 wow fadeInUp"
-                data-wow-delay={image.delay}
+                className="ht-about-img ht-about-img-2"
+                data-aos="fade-up"
+                data-aos-delay={image.delay}
               >
                 <img src={image.src} alt={image.alt} />
 
@@ -67,11 +69,11 @@ export default function AboutArea() {
             <div className="col-lg-6 col-sm-12">
               <div className="ht-about-content style-2">
                 <div className="section-title">
-                  <span className="subtitle wow fadeInUp" data-wow-delay=".2s">
+                  <span className="subtitle" data-aos="fade-up" data-aos-delay="200">
                     {section.subtitle}
                   </span>
 
-                  <h2 className="title wow fadeInUp" data-wow-delay=".4s">
+                  <h2 className="title" data-aos="fade-up" data-aos-delay="400">
                     {section.title}
                   </h2>
 
@@ -88,8 +90,9 @@ export default function AboutArea() {
                 {/* Button */}
                 <Link
                   to={button.link}
-                  className="ht-btn style-3 wow fadeInUp"
-                  data-wow-delay={button.delay}
+                  className="ht-btn style-3"
+                  data-aos="fade-up"
+                  data-aos-delay={button.delay}
                 >
                   {button.text}
                 </Link>

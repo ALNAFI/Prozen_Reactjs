@@ -7,8 +7,9 @@ export default function ContactInfo() {
         <div className="contact-info-wrapper">
           <div className="row gy-5">
             <div
-              className="col-lg-4 col-md-6 wow fadeInUp"
-              data-wow-delay=".3s"
+              className="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="300"
             >
               <div className="contact-info-item">
                 <div className="icon">
@@ -21,8 +22,9 @@ export default function ContactInfo() {
               </div>
             </div>
             <div
-              className="col-lg-4 col-md-6 wow fadeInUp"
-              data-wow-delay=".6s"
+              className="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="600"
             >
               <div className="contact-info-item">
                 <div className="icon">
@@ -37,8 +39,9 @@ export default function ContactInfo() {
               </div>
             </div>
             <div
-              className="col-lg-4 col-md-6 wow fadeInUp"
-              data-wow-delay=".9s"
+              className="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="900"
             >
               <div className="contact-info-item">
                 <div className="icon">

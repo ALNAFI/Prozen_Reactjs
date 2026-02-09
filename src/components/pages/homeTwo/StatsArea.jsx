@@ -39,7 +39,7 @@ export default function StatsArea() {
       </div>
 
       <div className="container">
-        <div className="ht-stats-wrapper-2 wow fadeInUp" data-wow-delay=".2s">
+        <div className="ht-stats-wrapper-2" data-aos="fade-up" data-aos-delay="200">
           {items.map((item) => (
             <StatItem key={item.id} item={item} />
           ))}

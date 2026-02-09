@@ -10,8 +10,9 @@ export default function ServicesArea() {
             {servicesAreaData.map((service) => (
               <div
                 key={service.id}
-                className="col-lg-6 col-md-6 col-sm-12 wow fadeInUp"
-                data-wow-delay={service.delay}
+                className="col-lg-6 col-md-6 col-sm-12"
+                data-aos="fade-up"
+                data-aos-delay={service.delay}
               >
                 <div className="ht-services-items mt-30">
                   <div className="icon">

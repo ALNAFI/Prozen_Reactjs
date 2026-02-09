@@ -39,7 +39,7 @@ export const servicesAreaData = {
     title: "Elevate Your Marketing Strategy",
     buttonText: "view all services",
     buttonLink: "/services",
-    delay: ".6s",
+    delay: 600,
   },
 
   services: [
@@ -49,7 +49,7 @@ export const servicesAreaData = {
       desc: "The first thing to remember about success is that it is a process nothing more, nothing less. There is really no magic to it and it's.",
       image: "images/service/2.jpg",
       link: "/servicedetails",
-      delay: ".2s",
+      delay: 200,
     },
     {
       id: 2,
@@ -57,7 +57,7 @@ export const servicesAreaData = {
       desc: "The first thing to remember about success is that it is a process nothing more, nothing less. There is really no magic to it and it's.",
       image: "images/service/2.jpg",
       link: "/servicedetails",
-      delay: ".4s",
+      delay: 400,
     },
     {
       id: 3,
@@ -65,7 +65,7 @@ export const servicesAreaData = {
       desc: "The first thing to remember about success is that it is a process nothing more, nothing less. There is really no magic to it and it's.",
       image: "images/service/2.jpg",
       link: "/servicedetails",
-      delay: ".6s",
+      delay: 600,
     },
   ],
 
@@ -102,21 +102,21 @@ export const aboutAreaData = {
       count: 1140,
       suffix: "+",
       label: "Happy Clients",
-      delay: ".6s",
+      delay: 600,
     },
     {
       id: 2,
       count: 480,
       suffix: "+",
       label: "Finished Projects",
-      delay: ".8s",
+      delay: 800,
     },
   ],
 
   button: {
     text: "Let's Get in Touch",
     link: "/aboutus",
-    delay: "1s",
+    delay: 1000,
   },
 };
 export const teamAreaData = {
@@ -127,7 +127,7 @@ export const teamAreaData = {
     button: {
       text: "All Team Members",
       link: "/team",
-      delay: ".4s",
+      delay: 400,
     },
   },
 
@@ -138,7 +138,7 @@ export const teamAreaData = {
       role: "SR Marketer",
       image: "images/team/5.jpg",
       link: "/teamdetails",
-      delay: ".2s",
+      delay: 200,
     },
     {
       id: 2,
@@ -146,7 +146,7 @@ export const teamAreaData = {
       role: "Executive officer",
       image: "images/team/6.jpg",
       link: "/teamdetails",
-      delay: ".4s",
+      delay: 400,
     },
     {
       id: 3,
@@ -154,7 +154,7 @@ export const teamAreaData = {
       role: "CEO & Founder",
       image: "images/team/7.jpg",
       link: "/teamdetails",
-      delay: ".6s",
+      delay: 600,
     },
     {
       id: 4,
@@ -162,7 +162,7 @@ export const teamAreaData = {
       role: "Finance advisor",
       image: "images/team/8.jpg",
       link: "/teamdetails",
-      delay: ".8s",
+      delay: 800,
     },
   ],
 
@@ -184,7 +184,7 @@ export const projectAreaData = {
   topButton: {
     text: "View All services",
     link: "/services",
-    delay: ".6s",
+    delay: 600,
   },
 
   projects: [
@@ -194,7 +194,7 @@ export const projectAreaData = {
       title: "Business consultancy",
       category: "UI/UX Design",
       link: "/projectdetails",
-      delay: ".2s",
+      delay: 200,
     },
     {
       id: 2,
@@ -202,7 +202,7 @@ export const projectAreaData = {
       title: "Crafting Digital Experiences",
       category: "Web Design",
       link: "/projectdetails",
-      delay: ".4s",
+      delay: 400,
     },
     {
       id: 3,
@@ -210,7 +210,7 @@ export const projectAreaData = {
       title: "Innovation in Every Swipe",
       category: "Development",
       link: "/projectdetails",
-      delay: ".6s",
+      delay: 600,
     },
     {
       id: 4,
@@ -218,7 +218,7 @@ export const projectAreaData = {
       title: "Turning Clicks Into Conversions",
       category: "Digital Marketing",
       link: "/projectdetails",
-      delay: ".8s",
+      delay: 800,
     },
   ],
 
@@ -226,7 +226,7 @@ export const projectAreaData = {
     textLine1: "View All",
     textLine2: "Works",
     link: "/project",
-    delay: "1s",
+    delay: 1000,
   },
 };
 
@@ -244,7 +244,7 @@ export const recentPostsPage2Data = {
       category: "Business solution",
       title: "Profitable business makes to you happy and growth",
       link: "/blogdetails",
-      delay: ".3s",
+      delay: 300,
     },
     {
       id: 2,
@@ -253,7 +253,7 @@ export const recentPostsPage2Data = {
       category: "Marketing solution",
       title: "Securing Funding for Your Startup: Expert Tips",
       link: "/blogdetails",
-      delay: ".6s",
+      delay: 600,
     },
     {
       id: 3,
@@ -262,7 +262,7 @@ export const recentPostsPage2Data = {
       category: "Business solution",
       title: "Strong Corporate Financial Model: Best Practices",
       link: "/blogdetails",
-      delay: ".9s",
+      delay: 900,
     },
   ],
 };

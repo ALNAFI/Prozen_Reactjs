@@ -25,7 +25,11 @@ export default function StatsArea() {
   return (
     <section className="ht-stats-area section-padding fix">
       <div className="container">
-        <div className="ht-stats-wrapper wow fadeInUp" data-wow-delay=".3s">
+        <div
+          className="ht-stats-wrapper"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
           {statsData.map((stat) => (
             <StatItem key={stat.id} stat={stat} />
           ))}

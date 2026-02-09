@@ -50,28 +50,28 @@ export const servicesData = [
     icon: "images/icon/1.svg",
     title: "Finance Planning",
     arrowClass: "one",
-    delay: ".2s",
+    delay: 200,
   },
   {
     id: 2,
     icon: "images/icon/2.svg",
     title: "Business Strategy",
     arrowClass: "two",
-    delay: ".4s",
+    delay: 400,
   },
   {
     id: 3,
     icon: "images/icon/3.svg",
     title: "Digital Marketing",
     arrowClass: "three",
-    delay: ".6s",
+    delay: 600,
   },
   {
     id: 4,
     icon: "images/icon/4.svg",
     title: "Investment Idea",
     arrowClass: "four",
-    delay: ".8s",
+    delay: 800,
   },
 ];
 // data/projectData.js
@@ -148,7 +148,7 @@ export const recentPostsData = {
       category: "Business",
       title: "Building Your Own Personal Learning Curriculum",
       link: "/blogdetails",
-      delay: ".2s",
+      delay: 200,
     },
     {
       id: 2,
@@ -157,7 +157,7 @@ export const recentPostsData = {
       category: "Business",
       title: "Seven Mistakes to Avoid in Your Technical Interviews",
       link: "/blogdetails",
-      delay: ".4s",
+      delay: 400,
     },
     {
       id: 3,
@@ -166,7 +166,7 @@ export const recentPostsData = {
       category: "Business",
       title: "Why Collaborative Coding is The Ultimate Career Hack",
       link: "/blogdetails",
-      delay: ".6s",
+      delay: 600,
     },
   ],
 };

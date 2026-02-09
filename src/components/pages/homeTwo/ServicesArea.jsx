@@ -14,10 +14,10 @@ export default function ServicesArea() {
         <div className="row">
           <div className="col-12">
             <div className="section-title">
-              <span className="subtitle wow fadeInUp" data-wow-delay=".2s">
+              <span className="subtitle" data-aos="fade-up" data-aos-delay="200">
                 {section.subtitle}
               </span>
-              <h2 className="title wow fadeInUp" data-wow-delay=".4s">
+              <h2 className="title" data-aos="fade-up" data-aos-delay="400">
                 {section.title1} <br /> {section.title2}
               </h2>
             </div>
@@ -30,8 +30,9 @@ export default function ServicesArea() {
             {/* Left thumb */}
             <div className="col-lg-4">
               <div
-                className="ht-services-thumbs wow fadeInUp"
-                data-wow-delay={mainThumb.delay}
+                className="ht-services-thumbs"
+                data-aos="fade-up"
+                data-aos-delay={mainThumb.delay}
               >
                 <img src={mainThumb.image} alt="img" />
                 <div className="content">
@@ -52,8 +53,9 @@ export default function ServicesArea() {
                 {services.map((item) => (
                   <div
                     key={item.id}
-                    className="single-item wow fadeInUp"
-                    data-wow-delay={item.delay}
+                    className="single-item"
+                    data-aos="fade-up"
+                    data-aos-delay={item.delay}
                   >
                     <h3>{item.title}</h3>
                     <p>{item.desc}</p>

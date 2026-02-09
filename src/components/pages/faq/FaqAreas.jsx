@@ -4,8 +4,9 @@ import { faqAreaData } from "../../../data/faqData";
 const AccordionItem = ({ item, isOpen, onToggle }) => {
   return (
     <div
-      className="accordion-item wow fadeInUp"
-      data-wow-delay={item.delay}
+      className="accordion-item"
+      data-aos="fade-up"
+      data-aos-delay={item.delay}
     >
       <h5 className="accordion-header">
         <button
@@ -52,7 +53,7 @@ export default function FaqAreas() {
           <div className="row gy-5">
             {/* Image */}
             <div className="col-xl-6 col-lg-6">
-              <div className="ht-faq-thumb wow fadeInUp" data-wow-delay=".3s">
+              <div className="ht-faq-thumb" data-aos="fade-up" data-aos-delay="300">
                 <img src={image} alt="faq" />
               </div>
             </div>
@@ -61,15 +62,15 @@ export default function FaqAreas() {
             <div className="col-xl-5 offset-xl-1 col-lg-6">
               <div className="ht-faq-content">
                 <div className="section-title">
-                  <span className="subtitle wow fadeInUp" data-wow-delay=".3s">
+                  <span className="subtitle" data-aos="fade-up" data-aos-delay="300">
                     {subtitle}
                   </span>
 
-                  <h2 className="title wow fadeInUp" data-wow-delay=".6s">
+                  <h2 className="title" data-aos="fade-up" data-aos-delay="600">
                     {title}
                   </h2>
 
-                  <p className="wow fadeInUp" data-wow-delay=".9s">
+                  <p data-aos="fade-up" data-aos-delay="900">
                     {description}
                   </p>
                 </div>

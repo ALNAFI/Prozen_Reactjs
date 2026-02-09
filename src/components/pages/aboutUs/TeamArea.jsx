@@ -9,11 +9,19 @@ export default function TeamArea() {
       <div className="container">
         {/* Section title */}
         <div className="section-title text-center">
-          <span className="subtitle wow fadeInUp" data-wow-delay=".2s">
+          <span
+            className="subtitle"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             {section.subtitle}
           </span>
 
-          <h2 className="title wow fadeInUp" data-wow-delay=".4s">
+          <h2
+            className="title"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
             Get consulting from our <br /> best consultants
           </h2>
         </div>
@@ -24,8 +32,9 @@ export default function TeamArea() {
             {members.map((member) => (
               <div
                 key={member.id}
-                className="col-lg-3 col-md-6 col-sm-12 wow fadeInUp"
-                data-wow-delay={member.delay}
+                className="col-lg-3 col-md-6 col-sm-12"
+                data-aos="fade-up"
+                data-aos-delay={parseFloat(member.delay) * 1000}
               >
                 <div className="ht-team-items">
                   <div className="ht-team-thumb">

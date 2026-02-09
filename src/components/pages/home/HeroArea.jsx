@@ -27,7 +27,7 @@ const HeroContent = memo(() => {
 
   return (
     <div className="ht-hero-content">
-      <h1 className="wow fadeInUp" data-wow-delay=".2s">
+      <h1 data-aos="fade-up" data-aos-delay="200">
         {title.main} <br />
         <span>{title.highlight}</span> <br />
         {title.rest.map((line, index) => (
@@ -36,7 +36,7 @@ const HeroContent = memo(() => {
           </span>
         ))}
       </h1>
-      <p className="desc wow fadeInUp" data-wow-delay=".4s">
+      <p className="desc" data-aos="fade-up" data-aos-delay="400">
         {descriptionParts.map((part, index, array) => (
           <span key={index}>
             {part}
@@ -46,8 +46,9 @@ const HeroContent = memo(() => {
       </p>
       <Link
         to={cta.link}
-        className="ht-btn style-2 wow fadeInUp"
-        data-wow-delay=".6s"
+        className="ht-btn style-2"
+        data-aos="fade-up"
+        data-aos-delay="600"
       >
         {cta.text}
       </Link>
@@ -64,8 +65,8 @@ const HeroImage = memo(() => {
   return (
     <div className="ht-hero-img">
       <img
-        className="wow fadeInUp"
-        data-wow-delay=".2s"
+        data-aos="fade-up"
+        data-aos-delay="200"
         src={heroImage.src}
         alt={heroImage.alt}
         loading="lazy"
