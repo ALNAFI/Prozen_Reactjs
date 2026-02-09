@@ -1,28 +1,36 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+// ================= Router =================
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+// ================= Providers =================
 import { OffcanvasProvider } from "./contexts/OffcanvasContext";
+import { LenisProvider } from "./contexts/LenisContext";
+
+// ================= Global UI =================
 import Offcanvas from "./components/common/Offcanvas";
+import BackToTop from "./components/ui/BackToTob";
+import Cursor from "./components/ui/Cursor";
+import ScrollToTop from "./components/ui/ScrollToTop";
+import AOSInit from "./components/ui/AOSInit";
+
+// ================= Pages =================
 import Home from "./pages/Home";
 import HomeTwo from "./pages/HomeTwo";
 import HomeThree from "./pages/HomeThree";
 import AboutUs from "./pages/AboutUs";
+import Services from "./pages/Services";
+import ServiceDetails from "./pages/ServiceDetails";
+import Project from "./pages/Project";
+import ProjectDetails from "./pages/ProjectDetails";
+import Team from "./pages/Team";
+import TeamDetails from "./pages/TeamDetails";
+import Pricing from "./pages/Pricing";
 import Blog from "./pages/Blog";
 import BlogList from "./pages/BlogList";
 import BlogDetails from "./pages/BlogDetails";
-import Contact from "./pages/Contact";
 import Faq from "./pages/Faq";
-import Pricing from "./pages/Pricing";
-import Services from "./pages/Services";
-import Project from "./pages/Project";
-import ProjectDetails from "./pages/ProjectDetails";
-import ServiceDetails from "./pages/ServiceDetails";
-import Team from "./pages/Team";
-import TeamDetails from "./pages/TeamDetails";
+import Contact from "./pages/Contact";
 import NotFoundPage from "./pages/NotFoundPage";
-import BackToTop from "./components/ui/BackToTob";
-import Cursor from "./components/ui/Cursor";
-import ScrollToTop from "./components/ui/ScrollToTop";
-import { LenisProvider } from "./contexts/LenisContext";
-import AOSInit from "./components/ui/AOSInit";
+
 
 export default function App() {
   return (
