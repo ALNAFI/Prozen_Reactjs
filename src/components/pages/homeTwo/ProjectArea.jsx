@@ -5,7 +5,7 @@ export default function ProjectArea() {
   const { section, topButton, projects, bottomButton } = projectAreaData;
 
   return (
-    <section className="ht-project-area-2 section-padding fix">
+    <section className="ht-project-area-2 section-padding fix pt-0">
       <div className="container">
         {/* Header */}
         <div className="section-title-area align-items-lg-end">

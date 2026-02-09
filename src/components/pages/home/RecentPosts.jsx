@@ -4,13 +4,14 @@ export default function RecentPosts({
   data,
   variant = "v1",
   sectionClassName = "ht-blog-area section-padding fix ",
+  pad = "",
 }) {
   const { section, posts } = data;
   const isV2 = variant === "v2";
   const metaClass = isV2 ? "ht-blog-meta ht-blog-meta-2" : "ht-blog-meta";
   const linkClass = isV2 ? "ht-link ht-link-2" : "ht-link";
   return (
-    <section className={sectionClassName}>
+    <section className={`${sectionClassName} ${pad}`}>
       <div className="container">
         <div className="section-title text-center">
           <span className="subtitle" data-aos="fade-up" data-aos-delay="200">

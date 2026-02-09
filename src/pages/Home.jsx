@@ -19,7 +19,7 @@ export default function Home() {
       <HeroArea />
       <ServicesArea />
       <AboutArea image="/images/about/1.jpg" />
-      <StatsArea />
+      <StatsArea pad="pt-0" />
       <ProjectArea />
       <ProcessArea
         bgColor="ht-process-area "
@@ -30,7 +30,7 @@ export default function Home() {
       />
       <TeamArea />
       <TestimonialsArea />
-      <RecentPosts data={recentPostsData} variant="v1" />
+      <RecentPosts data={recentPostsData} variant="v1" pad="pt-0" />
       <Footer />
     </>
   );

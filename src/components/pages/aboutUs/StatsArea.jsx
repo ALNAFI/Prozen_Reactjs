@@ -21,9 +21,9 @@ const StatItem = memo(({ stat }) => {
 
 StatItem.displayName = "StatItem";
 
-export default function StatsArea() {
+export default function StatsArea({pad=""}) {
   return (
-    <section className="ht-stats-area section-padding fix">
+    <section className={`ht-stats-area section-padding fix ${pad}`}>
       <div className="container">
         <div
           className="ht-stats-wrapper"

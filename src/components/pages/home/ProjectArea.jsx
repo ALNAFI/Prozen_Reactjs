@@ -20,7 +20,7 @@ export default function ProjectArea() {
     }
   }, [swiper]);
   return (
-    <section className="ht-project-area section-padding fix">
+    <section className="ht-project-area section-padding fix pt-0">
       <div className="container">
         {/* Header */}
         <div className="section-title-area align-items-lg-end mb-25">
