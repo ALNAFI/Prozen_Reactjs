@@ -40,6 +40,11 @@ export default function Search({ isOpen = false, onClose }) {
       <div
         ref={searchBarRef}
         className={`ht-header-search-bar d-flex align-items-center justify-content-center${isOpen ? " open" : ""}`}
+        style={{
+          pointerEvents: isOpen ? "auto" : "none",
+          transform: isOpen ? "translateY(0)" : "translateY(-100%)",
+          opacity: isOpen ? 1 : 0
+        }}
       >
         <button
           type="button"
