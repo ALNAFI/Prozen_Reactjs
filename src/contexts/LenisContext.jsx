@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useRef, useState } from "react";
 import PropTypes from "prop-types";
-import Lenis from "@studio-freight/lenis";
+import Lenis from "lenis";
 
 const LenisContext = createContext(null);
 
