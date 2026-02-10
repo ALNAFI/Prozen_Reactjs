@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { useCountUp } from "../../../hooks/useCountUp";
 import { HERO_DATA } from "../../../data/homeData";
 
-// Sub-component: Counter Card
 const CounterCard = memo(({ value, suffix, label, animationClass }) => {
   const { count, countRef } = useCountUp(value, 4000, 500);
   const displayValue = value % 1 === 0 ? Math.floor(count) : count.toFixed(1);
@@ -21,7 +20,6 @@ const CounterCard = memo(({ value, suffix, label, animationClass }) => {
 
 CounterCard.displayName = "CounterCard";
 
-// Sub-component: Hero Content
 const HeroContent = memo(() => {
   const { title, descriptionParts, cta } = HERO_DATA.content;
 
@@ -58,7 +56,6 @@ const HeroContent = memo(() => {
 
 HeroContent.displayName = "HeroContent";
 
-// Sub-component: Hero Image
 const HeroImage = memo(() => {
   const { heroImage } = HERO_DATA;
 
@@ -77,7 +74,7 @@ const HeroImage = memo(() => {
 
 HeroImage.displayName = "HeroImage";
 
-// Sub-component: Hero Shape
+
 const HeroShape = memo(() => {
   const { shape } = HERO_DATA;
 
@@ -92,7 +89,6 @@ const HeroShape = memo(() => {
 
 HeroShape.displayName = "HeroShape";
 
-// Sub-component: Hero Counters
 const HeroCounters = memo(() => {
   return (
     <div className="ht-hero-counter">

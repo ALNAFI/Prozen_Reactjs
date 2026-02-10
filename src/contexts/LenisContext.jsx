@@ -15,8 +15,7 @@ export function LenisProvider({ children }) {
       smoothWheel: true,
     });
 
-    // Keyboard scroll: Arrow Up/Down, Page Up/Down, Space, Home, End – let Lenis handle it
-    const KEY_SCROLL = 100; // px per Arrow Up/Down
+    const KEY_SCROLL = 100;
     function onKeyDown(e) {
       const active = document.activeElement;
       const isInput = active && (

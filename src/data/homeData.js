@@ -43,7 +43,7 @@ export const HERO_DATA = {
   ],
 };
 
-// data/servicesData.js
+
 export const servicesData = [
   {
     id: 1,
@@ -74,7 +74,7 @@ export const servicesData = [
     delay: 800,
   },
 ];
-// data/projectData.js
+
 export const projectData = [
   {
     id: 1,

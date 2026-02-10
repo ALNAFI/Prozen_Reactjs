@@ -38,7 +38,6 @@ const AccordionItem = ({ item, isOpen, onToggle }) => {
 export default function FaqAreas() {
   const { image, subtitle, title, description, items } = faqAreaData;
 
-  // Only one accordion item open at a time (Bootstrap-like behavior)
   const initialActiveId = items.find((item) => item.open)?.id || null;
   const [activeId, setActiveId] = useState(initialActiveId);
 

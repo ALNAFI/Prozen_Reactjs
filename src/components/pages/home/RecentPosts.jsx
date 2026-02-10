@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import { useMemo } from "react";
 
 export default function RecentPosts({
   data,
@@ -8,9 +9,16 @@ export default function RecentPosts({
   pad = "",
 }) {
   const { section, posts } = data;
-  const isV2 = variant === "v2";
-  const metaClass = isV2 ? "ht-blog-meta ht-blog-meta-2" : "ht-blog-meta";
-  const linkClass = isV2 ? "ht-link ht-link-2" : "ht-link";
+
+  const { isV2, metaClass, linkClass, safePosts } = useMemo(() => {
+    const isV2Local = variant === "v2";
+    return {
+      isV2: isV2Local,
+      metaClass: isV2Local ? "ht-blog-meta ht-blog-meta-2" : "ht-blog-meta",
+      linkClass: isV2Local ? "ht-link ht-link-2" : "ht-link",
+      safePosts: Array.isArray(posts) ? posts : [],
+    };
+  }, [variant, posts]);
   return (
     <section className={`${sectionClassName} ${pad}`}>
       <div className="container">
@@ -32,7 +40,7 @@ export default function RecentPosts({
         </div>
         <div className="ht-blog-wrapper">
           <div className="row">
-            {posts.map((post) => (
+            {safePosts.map((post) => (
               <div
                 key={post.id}
                 className="col-lg-4 col-md-6 col-sm-12"

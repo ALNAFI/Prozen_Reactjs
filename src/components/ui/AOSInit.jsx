@@ -6,7 +6,6 @@ import "aos/dist/aos.css";
 export default function AOSInit() {
   const location = useLocation();
 
-  // Initialize AOS once
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -14,7 +13,6 @@ export default function AOSInit() {
     });
   }, []);
 
-  // Refresh AOS on every route change so new elements animate
   useEffect(() => {
     AOS.refreshHard();
   }, [location.pathname]);

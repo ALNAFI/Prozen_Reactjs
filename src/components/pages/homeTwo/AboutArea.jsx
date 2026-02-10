@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { useCountUp } from "../../../hooks/useCountUp";
 import { aboutAreaData } from "../../../data/homeTwoData";
 
-// Sub-component for review counter in image section
 const ReviewCounter = memo(({ review }) => {
   const { count, countRef } = useCountUp(review.count, 4000, 0);
   const displayValue = review.count % 1 === 0 ? Math.floor(count) : count.toFixed(1);
@@ -21,7 +20,6 @@ const ReviewCounter = memo(({ review }) => {
 
 ReviewCounter.displayName = "ReviewCounter";
 
-// Sub-component for stat item with counter animation
 const StatItem = memo(({ item }) => {
   const { count, countRef } = useCountUp(item.count, 4000, 0);
   const displayValue = item.count % 1 === 0 ? Math.floor(count) : count.toFixed(1);

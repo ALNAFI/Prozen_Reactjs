@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Prozen React JS Template – Documentation</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="doc-root">
+      <!-- Sidebar -->
+      <aside class="doc-sidebar">
+        <div class="doc-logo">
+          <span class="doc-logo-mark">P</span>
+          <div class="doc-logo-text">
+            <span class="doc-logo-title">Prozen</span>
+            <span class="doc-logo-subtitle">React JS Template</span>
+          </div>
+        </div>
+
+        <button
+          type="button"
+          class="doc-sidebar-toggle"
+          aria-label="Toggle navigation"
+        >
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav class="doc-nav">
+          <ul>
+            <li><a href="#intro" class="active">1. Overview</a></li>
+            <li><a href="#getting-started">2. Getting Started</a></li>
+            <li><a href="#folder-structure">3. Folder Structure</a></li>
+            <li><a href="#scripts">4. NPM Scripts</a></li>
+            <li><a href="#tech-stack">5. Tech Stack & Libraries</a></li>
+            <li><a href="#layout-routing">6. Layout & Routing</a></li>
+            <li><a href="#pages">7. Pages & Sections</a></li>
+            <li><a href="#animations">8. Animations & Effects</a></li>
+            <li><a href="#customization">9. Customization</a></li>
+            <li><a href="#performance">10. Performance Notes</a></li>
+            <li><a href="#faq">11. FAQ</a></li>
+            <li><a href="#changelog">12. Changelog</a></li>
+            <li><a href="#support">13. Support & Credits</a></li>
+          </ul>
+        </nav>
+
+        <div class="doc-sidebar-footer">
+          <button
+            type="button"
+            class="doc-theme-toggle"
+            aria-label="Toggle dark mode"
+          >
+            <span class="doc-theme-toggle-icon sun">☀</span>
+            <span class="doc-theme-toggle-icon moon">🌙</span>
+          </button>
+        </div>
+      </aside>
+
+      <!-- Main content -->
+      <main class="doc-main">
+        <header class="doc-header">
+          <div>
+            <h1>Prozen – React Business & Consulting Template</h1>
+            <p class="doc-header-subtitle">
+              Clean, modern, animated single-page application built with React 19, Vite and
+              Tailored micro‑interactions.
+            </p>
+          </div>
+          <div class="doc-header-meta">
+            <span class="doc-badge primary">React 19</span>
+            <span class="doc-badge neutral">Vite 7</span>
+            <span class="doc-badge success">SPA</span>
+          </div>
+        </header>
+
+        <!-- 1. Overview -->
+        <section id="intro" class="doc-section">
+          <h2>1. Overview</h2>
+          <p>
+            <strong>Prozen React JS Template</strong> is a modern Single Page Application (SPA)
+            designed for <strong>business, finance, corporate and consulting</strong> websites.
+            It focuses on:
+          </p>
+          <ul>
+            <li><strong>Three hero homepages</strong> (Main, Corporate, Insurance)</li>
+            <li><strong>Fully React‑based</strong> routing – no jQuery, no inline scripts</li>
+            <li><strong>Smooth scrolling</strong> powered by Lenis</li>
+            <li><strong>Scroll animations</strong> handled by AOS (Animate On Scroll)</li>
+            <li><strong>Reusable UI sections</strong> for services, projects, team, FAQ, pricing, blog, and more</li>
+          </ul>
+        </section>
+
+        <!-- 2. Getting Started -->
+        <section id="getting-started" class="doc-section">
+          <h2>2. Getting Started</h2>
+
+          <div class="doc-grid two">
+            <div>
+              <h3>2.1. Requirements</h3>
+              <ul>
+                <li><strong>Node.js</strong> 18+ (recommended 20+)</li>
+                <li><strong>npm</strong> 9+ or <strong>pnpm / yarn</strong> (optional)</li>
+                <li>A modern browser (Chrome, Edge, Firefox, Safari)</li>
+              </ul>
+
+              <h3>2.2. Installation</h3>
+              <ol>
+                <li>
+                  <p><strong>Install dependencies</strong></p>
+                  <pre><code>cd prozen-react
+npm install
+</code></pre>
+                </li>
+                <li>
+                  <p><strong>Run development server</strong></p>
+                  <pre><code>npm run dev
+</code></pre>
+                  <p>
+                    By default Vite will start on
+                    <code>http://localhost:5173</code>.
+                  </p>
+                </li>
+                <li>
+                  <p><strong>Build for production</strong></p>
+                  <pre><code>npm run build
+npm run preview
+</code></pre>
+                </li>
+              </ol>
+            </div>
+
+            <div>
+              <h3>2.3. Project Highlights</h3>
+              <ul>
+                <li><strong>SPA navigation</strong> using <code>react-router-dom@7</code></li>
+                <li><strong>Context‑based Offcanvas menu</strong> for mobile navigation</li>
+                <li><strong>Lenis</strong> for buttery‑smooth scroll and keyboard scroll</li>
+                <li><strong>AOS</strong> for one‑time scroll‑in animations on every route change</li>
+                <li><strong>Swiper</strong> for hero sliders and testimonials</li>
+                <li><strong>React Hook Form</strong> for accessible contact forms</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- 3. Folder Structure -->
+        <section id="folder-structure" class="doc-section">
+          <h2>3. Folder Structure</h2>
+
+          <p>
+            Below is a condensed view of the project structure. Only the most important folders are
+            shown.
+          </p>
+
+          <pre class="doc-code-block"><code>prozen-react/
+├─ index.html                # Vite entry HTML (no direct scripts/styles)
+├─ package.json              # Scripts and dependencies
+├─ vite.config.*             # Vite configuration
+└─ src/
+   ├─ main.jsx               # React + Vite bootstrap
+   ├─ App.jsx                # Router + global providers
+   ├─ style/
+   │  ├─ style.css           # Compiled theme styles (from SCSS)
+   │  └─ lenis.css           # Lenis-specific overrides
+   ├─ assets/
+   │  └─ css/                # Original vendor CSS (Bootstrap etc.) - not used directly now
+   ├─ components/
+   │  ├─ common/             # Header, Offcanvas, Footer, Breadcrumb, TopHeader...
+   │  ├─ ui/                 # Cursor, Preloader, BackToTop, Search, ScrollToTop, AOSInit
+   │  └─ pages/
+   │     ├─ home/            # Home (main) sections: HeroArea, ServicesArea, ProjectArea, RecentPosts...
+   │     ├─ homeTwo/         # Corporate layout sections
+   │     ├─ homeThree/       # Insurance layout sections
+   │     ├─ aboutUs/         # About, Process, Stats, Team, Testimonials
+   │     ├─ faq/             # FAQ + Testimonials for FAQ page
+   │     ├─ blog/            # Blog grid
+   │     ├─ blogListAndDetails/ # Blog list and sidebar widgets
+   │     ├─ ServiceAndDetails/  # Services list and details
+   │     ├─ TeamAndDetails/     # Team grid and member details
+   │     ├─ project/            # Project listing
+   │     ├─ projectDetails/     # Single project view
+   │     ├─ contact/            # Contact form and info blocks
+   │     └─ pricing/            # Pricing table sections
+   ├─ pages/                # Route-level wrappers (Home, HomeTwo, HomeThree, AboutUs, Services, etc.)
+   ├─ contexts/
+   │  ├─ OffcanvasContext.jsx  # Global mobile menu state
+   │  └─ LenisContext.jsx      # Global Lenis instance + keyboard scroll integration
+   ├─ hooks/
+   │  ├─ useCountUp.js         # Counter-on-visible animation
+   │  ├─ useInputForm.js       # React Hook Form integration
+   │  └─ useStickyHeader.js    # Sticky header based on scroll threshold
+   └─ data/
+      ├─ homeData.js           # Home page content (hero, services, projects, posts)
+      ├─ homeTwoData.js        # Home Two content
+      ├─ HomeThreeData.js      # Home Three content
+      ├─ aboutUsData.js        # About content
+      ├─ faqData.js            # FAQ and testimonials content
+      ├─ blogData.js           # Blog posts for Blog page
+      ├─ serviceAndDetailsData.js
+      ├─ teamAndDetailsData.js
+      ├─ pricingData.js
+      └─ projectData.js
+</code></pre>
+
+          <p>
+            The goal is to keep <strong>all route logic in `App.jsx`</strong>, all layout in
+            <strong>`pages/*`</strong>, and all reusable sections in
+            <strong>`components/pages/*`</strong>. Content (titles, copy, images) lives in the
+            <strong>`data/*`</strong> files so your buyers can update text without touching JSX.
+          </p>
+        </section>
+
+        <!-- 4. NPM Scripts -->
+        <section id="scripts" class="doc-section">
+          <h2>4. NPM Scripts</h2>
+          <table class="doc-table">
+            <thead>
+              <tr>
+                <th>Script</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>npm run dev</code></td>
+                <td>Start Vite development server with hot-module replacement.</td>
+              </tr>
+              <tr>
+                <td><code>npm run build</code></td>
+                <td>Compile production build into the <code>dist/</code> folder.</td>
+              </tr>
+              <tr>
+                <td><code>npm run preview</code></td>
+                <td>Preview the production build on a local server.</td>
+              </tr>
+              <tr>
+                <td><code>npm run lint</code></td>
+                <td>Run ESLint over the source code (optional for buyers).</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- 5. Tech Stack -->
+        <section id="tech-stack" class="doc-section">
+          <h2>5. Tech Stack & Libraries</h2>
+
+          <div class="doc-grid three">
+            <div class="doc-card">
+              <h3>Core</h3>
+              <ul>
+                <li><strong>React</strong> 19.2.0</li>
+                <li><strong>Vite</strong> 7.x</li>
+                <li><strong>React Router DOM</strong> 7.x</li>
+              </ul>
+            </div>
+            <div class="doc-card">
+              <h3>UI & Layout</h3>
+              <ul>
+                <li><strong>Bootstrap 5</strong> (CSS only)</li>
+                <li><strong>Font Awesome 7</strong> icons</li>
+                <li>Custom CSS framework in <code>src/style/style.css</code></li>
+              </ul>
+            </div>
+            <div class="doc-card">
+              <h3>Animations & UX</h3>
+              <ul>
+                <li><strong>Lenis</strong> – smooth scrolling & keyboard scroll</li>
+                <li><strong>AOS</strong> – scroll-in animations</li>
+                <li><strong>Swiper</strong> – sliders in hero + testimonials</li>
+                <li>Custom cursor, preloader, back-to-top button</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- 6. Layout & Routing -->
+        <section id="layout-routing" class="doc-section">
+          <h2>6. Layout & Routing</h2>
+
+          <h3>6.1. Entry – <code>main.jsx</code></h3>
+          <p>
+            The app is bootstrapped with <code>createRoot</code> and global styles are imported
+            here:
+          </p>
+          <pre><code>import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./style/style.css";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import "./style/lenis.css";
+
+import App from "./App.jsx";
+
+createRoot(document.getElementById("root")).render(
+  &lt;StrictMode&gt;
+    &lt;App /&gt;
+  &lt;/StrictMode&gt;
+);</code></pre>
+
+          <h3>6.2. Global providers – <code>App.jsx</code></h3>
+          <p>
+            <code>App.jsx</code> wraps the entire SPA with providers and defines all routes:
+          </p>
+          <ul>
+            <li><strong>LenisProvider</strong> – smooth scroll & keyboard handling</li>
+            <li><strong>BrowserRouter</strong> – client-side routing</li>
+            <li><strong>OffcanvasProvider</strong> – global mobile menu state</li>
+            <li><strong>AOSInit</strong> – initializes and refreshes AOS on route changes</li>
+          </ul>
+          <p>
+            Global UI that should be visible on every page – Offcanvas menu, ScrollToTop,
+            BackToTop, custom Cursor – is rendered outside of <code>&lt;Routes&gt;</code>.
+          </p>
+        </section>
+
+        <!-- 7. Pages & Sections -->
+        <section id="pages" class="doc-section">
+          <h2>7. Pages & Sections</h2>
+
+          <h3>7.1. Homepages</h3>
+          <ul>
+            <li>
+              <strong>Home</strong> (`/`) – Business / consulting default homepage with hero,
+              services, about, stats, projects, process, team, testimonials, blog.
+            </li>
+            <li>
+              <strong>Home Two</strong> (`/hometwo`) – Corporate layout with alternate hero, stats,
+              service carousel, and FAQ testimonials.
+            </li>
+            <li>
+              <strong>Home Three</strong> (`/homethree`) – Insurance‑focused layout with hero video
+              card, services, process, pricing, testimonials and FAQ.
+            </li>
+          </ul>
+
+          <h3>7.2. Inner pages</h3>
+          <ul>
+            <li><strong>About Us</strong> – Mission, process, stats, team, testimonials.</li>
+            <li><strong>Services</strong> &amp; <strong>Service Details</strong></li>
+            <li><strong>Projects</strong> &amp; <strong>Project Details</strong></li>
+            <li><strong>Team</strong> &amp; <strong>Team Details</strong></li>
+            <li><strong>Pricing</strong> – Pricing tiers + FAQ accordion.</li>
+            <li><strong>Blog / Blog List / Blog Details</strong></li>
+            <li><strong>FAQ</strong> – React accordion (no Bootstrap JS).</li>
+            <li><strong>Contact</strong> – Google Maps area + contact form (React Hook Form).</li>
+          </ul>
+
+          <p>
+            Each route-level page in <code>src/pages/*</code> is a thin wrapper that composes sections
+            from <code>src/components/pages/*</code> and uses data from <code>src/data/*</code>.
+          </p>
+        </section>
+
+        <!-- 8. Animations & Effects -->
+        <section id="animations" class="doc-section">
+          <h2>8. Animations & Effects</h2>
+
+          <h3>8.1. Scroll animations (AOS)</h3>
+          <p>
+            AOS is initialized in <code>AOSInit.jsx</code> and refreshed on every route change using
+            <code>useLocation</code>. Components opt into animations using
+            <code>data-aos</code> attributes:
+          </p>
+          <pre><code>&lt;div
+  data-aos="fade-up"
+  data-aos-delay="300"
+&gt;
+  ...
+&lt;/div&gt;</code></pre>
+
+          <h3>8.2. Smooth scrolling (Lenis)</h3>
+          <p>
+            <code>LenisContext.jsx</code> creates a single Lenis instance and wires it to a
+            <code>requestAnimationFrame</code> loop and keyboard events. The custom
+            <code>ScrollToTop</code> component integrates with Lenis to keep scroll positions in
+            sync on every route change.
+          </p>
+
+          <h3>8.3. Sliders (Swiper)</h3>
+          <p>
+            Swiper is used for hero sliders and testimonials. Each instance imports only the
+            required modules (e.g. <code>Navigation</code>, <code>Autoplay</code>) to keep bundle
+            size small.
+          </p>
+
+          <h3>8.4. Micro‑interactions</h3>
+          <ul>
+            <li>Offcanvas mobile menu with animated submenus</li>
+            <li>Search overlay with smooth slide‑down animation</li>
+            <li>Back‑to‑top button that fades in after scroll</li>
+            <li>Custom cursor following mouse with hover states</li>
+            <li>Count‑up stats using <code>useCountUp</code> + IntersectionObserver</li>
+          </ul>
+        </section>
+
+        <!-- 9. Customization -->
+        <section id="customization" class="doc-section">
+          <h2>9. Customization</h2>
+
+          <h3>9.1. Colors & typography</h3>
+          <p>
+            Theme colors, typography and spacing are controlled in
+            <code>src/style/style.css</code> using CSS variables (e.g.
+            <code>--ht-theme-color</code>, <code>--ht-heading-color</code>). Updating these
+            variables will update the entire template.
+          </p>
+
+          <h3>9.2. Content</h3>
+          <p>
+            All text, counters, and image URLs live in <code>src/data/*</code>:
+          </p>
+          <ul>
+            <li><code>homeData.js</code> – main homepage hero, services, projects, posts.</li>
+            <li><code>homeTwoData.js</code>, <code>HomeThreeData.js</code> – alternate layouts.</li>
+            <li><code>aboutUsData.js</code>, <code>faqData.js</code>, <code>blogData.js</code>, etc.</li>
+          </ul>
+
+          <h3>9.3. Adding a new section</h3>
+          <ol>
+            <li>
+              Create a new component under <code>src/components/pages/&lt;group&gt;/</code>
+              (e.g. <code>services</code>, <code>home</code>).
+            </li>
+            <li>Wire its content via a new or existing <code>data</code> file.</li>
+            <li>Include the component in the proper page in <code>src/pages/*</code>.</li>
+          </ol>
+        </section>
+
+        <!-- 10. Performance Notes -->
+        <section id="performance" class="doc-section">
+          <h2>10. Performance Notes</h2>
+          <ul>
+            <li>Built on Vite – instant dev server and optimized production bundles.</li>
+            <li>Only necessary Swiper modules are imported per slider.</li>
+            <li>Animations are lightweight (CSS + AOS), no heavy JS animation engines.</li>
+            <li>Lenis smooth scroll is created once and shared via React context.</li>
+          </ul>
+          <p>
+            For further optimization you can enable route‑level code splitting using
+            <code>React.lazy</code> in <code>App.jsx</code>.
+          </p>
+        </section>
+
+        <!-- 11. FAQ -->
+        <section id="faq" class="doc-section">
+          <h2>11. Frequently Asked Questions</h2>
+          <h3>11.1. Does this template use jQuery?</h3>
+          <p><strong>No.</strong> All interactivity is implemented in React and vanilla JS.</p>
+
+          <h3>11.2. Can I use only one of the homepages?</h3>
+          <p>
+            Yes. Remove unused route imports from <code>App.jsx</code> and their corresponding
+            navigation items from the header and offcanvas menu.
+          </p>
+
+          <h3>11.3. How do I change images?</h3>
+          <p>
+            Update the <code>image</code> paths in the data files (e.g.
+            <code>homeData.js</code>, <code>aboutUsData.js</code>) and place your assets under the
+            public <code>images/</code> directory.
+          </p>
+
+          <h3>11.4. How do I change the primary color?</h3>
+          <p>
+            Edit the CSS variable <code>--ht-theme-color</code> inside
+            <code>src/style/style.css</code>.
+          </p>
+        </section>
+
+        <!-- 12. Changelog -->
+        <section id="changelog" class="doc-section">
+          <h2>12. Changelog</h2>
+          <ul>
+            <li>
+              <strong>v1.0.0</strong> – Initial React SPA release
+              <ul>
+                <li>3 Home pages (Main, Corporate, Insurance)</li>
+                <li>12+ inner pages (About, Services, Projects, Team, Pricing, Blog, FAQ, Contact)</li>
+                <li>Lenis smooth scroll, AOS animations, Swiper sliders, custom cursor, preloader</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <!-- 13. Support & Credits -->
+        <section id="support" class="doc-section doc-section-last">
+          <h2>13. Support & Credits</h2>
+          
+
+          <h3>Credits</h3>
+          <ul>
+            <li>React, Vite, React Router</li>
+            <li>Lenis – smooth scroll engine</li>
+            <li>AOS – Animate On Scroll Library</li>
+            <li>Swiper – Modern slider/carousel</li>
+            <li>Bootstrap 5 CSS</li>
+            <li>Font Awesome 7 Icons</li>
+            <li>All images used in the live demo are for preview purposes only.</li>
+          </ul>
+
+          <div class="doc-callout">
+            <h3>Need Customization?</h3>
+            <p>
+              You can extend this template with additional pages, dashboards, or custom integrations.
+              The codebase is modular and follows modern React best practices, making it easy to
+              adapt for your buyers.
+            </p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./assets/main.js"></script>
+  </body>
+</html>
+

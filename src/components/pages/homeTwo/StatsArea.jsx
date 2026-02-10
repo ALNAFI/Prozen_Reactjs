@@ -2,7 +2,6 @@ import { memo } from "react";
 import { useCountUp } from "../../../hooks/useCountUp";
 import { statsData } from "../../../data/homeTwoData";
 
-// Sub-component for individual stat item with counter animation
 const StatItem = memo(({ item }) => {
   const { count, countRef } = useCountUp(item.count, 4000, 0);
   const displayValue = item.count % 1 === 0 ? Math.floor(count) : count.toFixed(1);

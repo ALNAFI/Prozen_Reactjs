@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import { useCountUp } from "../../../hooks/useCountUp";
 import { statsData } from "../../../data/aboutUsData";
 
-// Sub-component for individual stat item with counter animation
 const StatItem = memo(({ stat }) => {
   const { count, countRef } = useCountUp(stat.value, 4000, 500);
   const displayValue = stat.value % 1 === 0 ? Math.floor(count) : count.toFixed(1);

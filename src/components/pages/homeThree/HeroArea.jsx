@@ -14,6 +14,7 @@ const HERO_SLIDES = [
 
 export default function HeroArea() {
   const [bgStyle, setBgStyle] = useState({});
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
   const nextRef = useRef(null);
   const [swiper, setSwiper] = useState(null);
 
@@ -37,6 +38,20 @@ export default function HeroArea() {
       swiper.navigation.update();
     }
   }, [swiper]);
+
+
+  useEffect(() => {
+    if (!isVideoOpen) return;
+
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape") {
+        setIsVideoOpen(false);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [isVideoOpen]);
 
   return (
     <section className="ht-hero-area hero-3" style={bgStyle}>
@@ -98,15 +113,50 @@ export default function HeroArea() {
             <div className="play-icon">
               <img src="images/hero/text-spiner.png" alt="text" />
               <div className="icon">
-                <Link
-                  to="https://www.youtube.com/watch?v=axzocwX0rEo"
-                  className="video-popup"
+                <button
+                  type="button"
+                  className="video-popup-btn"
+                  onClick={() => setIsVideoOpen(true)}
+                  aria-label="Play video"
                 >
                   <i className="fa-solid fa-play"></i>
-                </Link>
+                </button>
               </div>
             </div>
           </div>
+
+          {isVideoOpen && (
+            <div
+              className="video-modal-overlay"
+              onClick={() => setIsVideoOpen(false)}
+              role="button"
+              tabIndex={-1}
+              aria-label="Close video"
+            >
+              <div
+                className="video-modal-content"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <button
+                  type="button"
+                  className="video-modal-close"
+                  onClick={() => setIsVideoOpen(false)}
+                  aria-label="Close video"
+                >
+                  ×
+                </button>
+                <div className="video-modal-iframe-wrapper">
+                  <iframe
+                    src="https://www.youtube.com/embed/axzocwX0rEo?autoplay=1"
+                    title="Featured services video"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  />
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </section>
