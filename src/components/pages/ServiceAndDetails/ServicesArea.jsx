@@ -22,7 +22,7 @@ export default function ServicesArea() {
                     />
                   </div>
 
-                  <Link to="/service-details">
+                  <Link to="/servicedetails">
                     <h3 className="title">
                       {service.title}{" "}
                       <img

@@ -4,7 +4,7 @@ export const projectData = [
     title: "Digital Transformation Readiness",
     category: "Digital marketing",
     image: "/images/project/9.jpg",
-    link: "/project-details",
+    link: "/projectdetails",
     delay: 200,
   },
   {
@@ -12,7 +12,7 @@ export const projectData = [
     title: "Digital Transformation Readiness",
     category: "Digital marketing",
     image: "/images/project/10.jpg",
-    link: "/project-details",
+    link: "/projectdetails",
     delay: 400,
   },
   {
@@ -20,7 +20,7 @@ export const projectData = [
     title: "Digital Transformation Readiness",
     category: "Digital marketing",
     image: "/images/project/11.jpg",
-    link: "/project-details",
+    link: "/projectdetails",
     delay: 600,
   },
   {
@@ -28,7 +28,7 @@ export const projectData = [
     title: "Digital Transformation Readiness",
     category: "Digital marketing",
     image: "/images/project/12.jpg",
-    link: "/project-details",
+    link: "/projectdetails",
     delay: 800,
   },
   {
@@ -36,7 +36,7 @@ export const projectData = [
     title: "Digital Transformation Readiness",
     category: "Digital marketing",
     image: "/images/project/13.jpg",
-    link: "/project-details",
+    link: "/projectdetails",
     delay: 1000,
   },
   {
@@ -44,7 +44,7 @@ export const projectData = [
     title: "Digital Transformation Readiness",
     category: "Digital marketing",
     image: "/images/project/14.jpg",
-    link: "/project-details",
+    link: "/projectdetails",
     delay: 1200,
   },
 ];
