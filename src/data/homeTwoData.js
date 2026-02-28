@@ -82,7 +82,7 @@ export const aboutAreaData = {
   image: {
     src: "images/about/2.jpg",
     alt: "about image",
-    delay: ".2s",
+    delay: 200,
     review: {
       count: 10,
       suffix: "K+",

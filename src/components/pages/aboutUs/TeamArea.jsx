@@ -34,7 +34,7 @@ export default function TeamArea() {
                 key={member.id}
                 className="col-lg-3 col-md-6 col-sm-12"
                 data-aos="fade-up"
-                data-aos-delay={parseFloat(member.delay) * 1000}
+                data-aos-delay={member.delay}
               >
                 <div className="ht-team-items">
                   <div className="ht-team-thumb">

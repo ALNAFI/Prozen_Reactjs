@@ -44,7 +44,7 @@ export default function ProcessArea({
                 key={item.id}
                 className="col-lg-3 col-md-6 col-sm-12"
                 data-aos="fade-up"
-                data-aos-delay={parseFloat(item.delay) * 1000}
+                data-aos-delay={item.delay}
               >
                 <div className={`mt-25 ${descriptionColor}`}>
                   <span className="step">{item.step}</span>

@@ -52,7 +52,7 @@ export default function ChooseArea() {
                     key={item.id}
                     className="single-item"
                     data-aos="fade-up"
-                    data-aos-delay={parseFloat(item.delay) * 1000}
+                    data-aos-delay={item.delay}
                   >
                     <div className="icon">
                       <img src={item.icon} alt={item.title} />

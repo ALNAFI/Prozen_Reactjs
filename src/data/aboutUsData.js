@@ -20,7 +20,7 @@ export const processData = {
       title: "Onboarding",
       description:
         "Initial consultations to identify the client's goals and challenges.",
-      delay: ".3s",
+      delay: 300,
     },
     {
       id: 2,
@@ -28,7 +28,7 @@ export const processData = {
       title: "Planning",
       description:
         "Initial consultations to identify the client's goals and challenges.",
-      delay: ".6s",
+      delay: 600,
     },
     {
       id: 3,
@@ -36,7 +36,7 @@ export const processData = {
       title: "Implementation",
       description:
         "Initial consultations to identify the client's goals and challenges.",
-      delay: ".9s",
+      delay: 900,
     },
   ],
 };
@@ -84,7 +84,7 @@ export const chooseData = {
       title: "Money-Back Guarantee",
       description:
         "Our approach ensures that every project undertake is strategically crafted.",
-      delay: ".3s",
+      delay: 300,
     },
     {
       id: 2,
@@ -92,7 +92,7 @@ export const chooseData = {
       title: "Cancellation Policy",
       description:
         "Our approach ensures that every project undertake is strategically crafted.",
-      delay: ".6s",
+      delay: 600,
     },
     {
       id: 3,
@@ -100,7 +100,7 @@ export const chooseData = {
       title: "High-end security",
       description:
         "Our approach ensures that every project undertake is strategically crafted.",
-      delay: ".9s",
+      delay: 900,
     },
     {
       id: 4,
@@ -108,7 +108,7 @@ export const chooseData = {
       title: "Personalized Strategy",
       description:
         "Our approach ensures that every project undertake is strategically crafted.",
-      delay: "1.2s",
+      delay: 1200,
     },
   ],
 };
@@ -124,7 +124,7 @@ export const teamSectionData = {
       name: "Linda F. Collins",
       role: "SR Marketer",
       image: "/images/team/1.jpg",
-      delay: ".2s",
+      delay: 200,
       socials: ["x-twitter", "instagram"],
     },
     {
@@ -132,7 +132,7 @@ export const teamSectionData = {
       name: "Sandra D. Rainey",
       role: "Executive officer",
       image: "/images/team/2.jpg",
-      delay: ".4s",
+      delay: 400,
       socials: ["x-twitter", "instagram"],
     },
     {
@@ -140,7 +140,7 @@ export const teamSectionData = {
       name: "Brooklyn Simmons",
       role: "CEO & Founder",
       image: "/images/team/3.jpg",
-      delay: ".6s",
+      delay: 600,
       socials: ["x-twitter", "instagram"],
     },
     {
@@ -148,7 +148,7 @@ export const teamSectionData = {
       name: "Patrick Stewart",
       role: "Finance advisor",
       image: "/images/team/4.jpg",
-      delay: ".8s",
+      delay: 800,
       socials: ["x-twitter", "instagram"],
     },
   ],
