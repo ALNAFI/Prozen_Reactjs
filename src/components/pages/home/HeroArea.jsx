@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useCountUp } from "../../../hooks/useCountUp";
 import { HERO_DATA } from "../../../data/homeData";
 
-const CounterCard = memo(({ value, suffix, label, animationClass }) => {
+const CounterCard = memo(function CounterCard({ value, suffix, label, animationClass }) {
   const { count, countRef } = useCountUp(value, 4000, 500);
   const displayValue = value % 1 === 0 ? Math.floor(count) : count.toFixed(1);
 
@@ -17,10 +17,9 @@ const CounterCard = memo(({ value, suffix, label, animationClass }) => {
     </div>
   );
 });
-
 CounterCard.displayName = "CounterCard";
 
-const HeroContent = memo(() => {
+const HeroContent = memo(function HeroContent() {
   const { title, descriptionParts, cta } = HERO_DATA.content;
 
   return (
@@ -53,10 +52,9 @@ const HeroContent = memo(() => {
     </div>
   );
 });
-
 HeroContent.displayName = "HeroContent";
 
-const HeroImage = memo(() => {
+const HeroImage = memo(function HeroImage() {
   const { heroImage } = HERO_DATA;
 
   return (
@@ -71,11 +69,9 @@ const HeroImage = memo(() => {
     </div>
   );
 });
-
 HeroImage.displayName = "HeroImage";
 
-
-const HeroShape = memo(() => {
+const HeroShape = memo(function HeroShape() {
   const { shape } = HERO_DATA;
 
   return (
@@ -86,10 +82,9 @@ const HeroShape = memo(() => {
     </div>
   );
 });
-
 HeroShape.displayName = "HeroShape";
 
-const HeroCounters = memo(() => {
+const HeroCounters = memo(function HeroCounters() {
   return (
     <div className="ht-hero-counter">
       {HERO_DATA.counters.map((counter) => (
@@ -104,9 +99,7 @@ const HeroCounters = memo(() => {
     </div>
   );
 });
-
 HeroCounters.displayName = "HeroCounters";
-
 
 const HeroArea = () => {
   const sectionRef = useRef(null);
@@ -141,4 +134,7 @@ const HeroArea = () => {
   );
 };
 
-export default memo(HeroArea);
+const MemoizedHeroArea = memo(HeroArea);
+MemoizedHeroArea.displayName = "HeroArea";
+
+export default MemoizedHeroArea;

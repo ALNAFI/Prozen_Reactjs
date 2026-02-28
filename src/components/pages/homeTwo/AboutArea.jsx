@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useCountUp } from "../../../hooks/useCountUp";
 import { aboutAreaData } from "../../../data/homeTwoData";
 
-const ReviewCounter = memo(({ review }) => {
+const ReviewCounter = memo(function ReviewCounter({ review }) {
   const { count, countRef } = useCountUp(review.count, 4000, 0);
   const displayValue = review.count % 1 === 0 ? Math.floor(count) : count.toFixed(1);
 
@@ -17,10 +17,9 @@ const ReviewCounter = memo(({ review }) => {
     </div>
   );
 });
-
 ReviewCounter.displayName = "ReviewCounter";
 
-const StatItem = memo(({ item }) => {
+const StatItem = memo(function StatItem({ item }) {
   const { count, countRef } = useCountUp(item.count, 4000, 0);
   const displayValue = item.count % 1 === 0 ? Math.floor(count) : count.toFixed(1);
 
@@ -39,7 +38,6 @@ const StatItem = memo(({ item }) => {
     </div>
   );
 });
-
 StatItem.displayName = "StatItem";
 
 export default function AboutArea() {

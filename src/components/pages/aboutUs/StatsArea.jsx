@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { useCountUp } from "../../../hooks/useCountUp";
 import { statsData } from "../../../data/aboutUsData";
 
-const StatItem = memo(({ stat }) => {
+const StatItem = memo(function StatItem({ stat }) {
   const { count, countRef } = useCountUp(stat.value, 4000, 500);
   const displayValue = stat.value % 1 === 0 ? Math.floor(count) : count.toFixed(1);
 
@@ -18,7 +18,6 @@ const StatItem = memo(({ stat }) => {
     </div>
   );
 });
-
 StatItem.displayName = "StatItem";
 
 export default function StatsArea({ pad = "" }) {

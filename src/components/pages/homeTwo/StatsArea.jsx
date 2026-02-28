@@ -2,7 +2,7 @@ import { memo } from "react";
 import { useCountUp } from "../../../hooks/useCountUp";
 import { statsData } from "../../../data/homeTwoData";
 
-const StatItem = memo(({ item }) => {
+const StatItem = memo(function StatItem({ item }) {
   const { count, countRef } = useCountUp(item.count, 4000, 0);
   const displayValue = item.count % 1 === 0 ? Math.floor(count) : count.toFixed(1);
 
@@ -19,7 +19,6 @@ const StatItem = memo(({ item }) => {
     </div>
   );
 });
-
 StatItem.displayName = "StatItem";
 
 export default function StatsArea() {
