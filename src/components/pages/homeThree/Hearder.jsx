@@ -3,10 +3,8 @@ import { Link } from "react-router-dom";
 import { useStickyHeader } from "../../../hooks/useStickyHeader";
 import { useOffcanvas } from "../../../contexts/OffcanvasContext";
 
-const STICKY_SCROLL_THRESHOLD = 250;
-
 export default function Header({ onSearchClick }) {
-  const isSticky = useStickyHeader(STICKY_SCROLL_THRESHOLD);
+  const isSticky = useStickyHeader();
   const { openOffcanvas } = useOffcanvas();
 
   return (

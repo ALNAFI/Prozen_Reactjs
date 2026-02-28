@@ -1,30 +1,12 @@
-import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import TopHeader from "./TopHeader";
 import { headerMenuData } from "../../data/headerMenuData";
 import { useOffcanvas } from "../../contexts/OffcanvasContext";
+import { useStickyHeader } from "../../hooks/useStickyHeader";
 
 export default function Header() {
   const { openOffcanvas } = useOffcanvas();
-  const headerRef = useRef(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (!headerRef.current) return;
-
-      if (window.scrollY > 250) {
-        headerRef.current.classList.add("sticky");
-      } else {
-        headerRef.current.classList.remove("sticky");
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  const isSticky = useStickyHeader();
 
   return (
     <header className="ht-header-area header-1">
@@ -33,8 +15,7 @@ export default function Header() {
 
       {/* Main Header */}
       <div
-        ref={headerRef}
-        className="ht-main-header header-1"
+        className={`ht-main-header header-1${isSticky ? " sticky" : ""}`}
       >
         <div className="container">
           <div className="ht-menu-wrapper">

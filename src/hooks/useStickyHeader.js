@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
-export const useStickyHeader = (threshold = 250) => {
+const STICKY_THRESHOLD = 250;
+
+export const useStickyHeader = (threshold = STICKY_THRESHOLD) => {
   const [isSticky, setIsSticky] = useState(false);
 
   useEffect(() => {
