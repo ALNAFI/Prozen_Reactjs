@@ -123,8 +123,6 @@ const HeroArea = () => {
         backgroundRepeat: "no-repeat",
       });
     };
-    img.onerror = () => {
-    };
   }, []);
 
   return (
